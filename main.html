@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+            scrollbar-width:none;
+            -ms-overflow-style: none;
+        }
+        html ,body{
+            width: auto;
+            height:100vh;
+            /* overflow-y: hidden; */
+        }
+        .slide{
+            position: absolute;
+            height: 100vh;
+        }
+        .one {
+            width: 120vw;
+            background-image: url(images/1.png);
+            background-size:cover;
+            z-index:999;
+            left: 0;
+        }
+        .two {
+            width: 130vw;
+            background-image: url(images/2.png);
+            background-size:cover;
+            z-index: 998;
+            left: 90vw;
+        }
+        .three {
+            width: 100vw;
+            background-image: url(images/3.png);
+            background-size:cover;
+            z-index:999;
+            left:210vw
+        }
+        .four {
+            width: 150vw;
+            background-image: url(images/4.png);
+            background-size:cover;
+            z-index:997;
+            left: 210vw;
+        }
+        .five {
+            width: 130vw;
+            background-image: url(images/5.png);
+            background-size:cover;
+            z-index:998;
+            left: 400vw;
+        }
+        .six {
+            width: 120vw;
+            background-image: url(images/6.png);
+            background-size:cover;
+            z-index:999;
+            left: 600vw;
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+            <div class="slide one rellax" data-rellax-speed="6" ></div>
+            <div class="slide two rellax" data-rellax-speed="2"></div>
+            <div class="slide three rellax" data-rellax-speed="5"></div>
+            <div class="slide four rellax" data-rellax-speed="2"></div>
+            <div class="slide five rellax" data-rellax-speed="6"></div>
+            <div class="slide six rellax" data-rellax-speed="10"></div>
+</body>
+<script src="js/rellax.js"></script>
+<script>
+    // Also can pass in optional settings block
+    window.onload = function(){
+        var rellax = new Rellax('.rellax', {
+      speed: -2,
+      center: false,
+      wrapper: null,
+      round: true,
+      vertical: false,
+      horizontal: true
+    });
+    setInterval(function(){
+        console.log(window.scrollX)
+    },100)
+    }
+  </script>
+    <!-- <script>
+        window.addEventListener("scroll",function(e){
+            var one = document.querySelector(".one");
+            var two = document.querySelector(".two");
+            var three = document.querySelector(".three");
+            var four = document.querySelector(".four");
+            var five = document.querySelector(".five");
+            var six = document.querySelector(".six");
+            one.style.transfer = "translate3d("+100+"px,0px,0px)"
+            // console.log(outer.scrollTop)
+            console.log(one)
+
+        })
+            
+    </script> -->
+</html>
