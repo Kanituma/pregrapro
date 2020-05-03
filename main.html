@@ -20,6 +20,16 @@
             position: absolute;
             height: 100vh;
         }
+        .img {
+            position: absolute;
+            border:10px solid red;
+            left: 50%;
+            top: 45%;
+            transform: translate(-50%,-50%);
+            width: 270px;
+            height: 360px;
+            /* z-index: 1000; */
+        }
         .one {
             width: 120vw;
             background-image: url(images/1.png);
@@ -27,12 +37,23 @@
             z-index:999;
             left: 0;
         }
+        .ione {
+            background-image: url(images/img1.jpg);
+            background-size:contain;
+            left: 45%;
+        }
+        
         .two {
             width: 130vw;
             background-image: url(images/2.png);
             background-size:cover;
             z-index: 998;
             left: 90vw;
+        }
+        .itwo {
+            background-image: url(images/img2.jpg);
+            background-size:contain;
+            left: 35%;
         }
         .three {
             width: 100vw;
@@ -41,6 +62,10 @@
             z-index:999;
             left:210vw
         }
+        .ithree {
+            background-image: url(images/img3.jpg);
+            background-size:contain;
+        }
         .four {
             width: 150vw;
             background-image: url(images/4.png);
@@ -48,64 +73,130 @@
             z-index:997;
             left: 210vw;
         }
+        .ifour {
+            background-image: url(images/img4.jpg);
+            background-size:contain;
+            left: 50%;
+        }
         .five {
             width: 130vw;
             background-image: url(images/5.png);
             background-size:cover;
             z-index:998;
-            left: 400vw;
+            left: 420vw;
+        }
+        .ifive {
+            background-image: url(images/img5.jpg);
+            background-size:contain;
+            left: 40%;
         }
         .six {
             width: 120vw;
             background-image: url(images/6.png);
             background-size:cover;
             z-index:999;
-            left: 600vw;
+            left: 645vw;
+        }
+        .isix {
+            background-image: url(images/img6.jpg);
+            background-size:contain;
+            left: 60%;
         }
         ::-webkit-scrollbar{
             display: none;
         }
+        .comment {
+            /* pointer-events: none; */
+        }
+        .open{
+           position: fixed;
+           left: 50%;
+           top: 50%;
+           transform: translate(-50%,-50%)scale(1);
+           transition: 0.3s ease;
+           opacity: 1;
+           width: 90vw;
+           height: 90vh;
+           border: 5px solid orange;
+           background-color: aliceblue;
+           z-index: 1000;
+           visibility: visible;
+        }
+        .close{
+           position: fixed;
+           left: 50%;
+           top: 50%;
+           transform: translate(-50%,-50%) scale(0.9);
+           transition: 0.3s ease;
+           opacity: 0;
+           width: 90vw;
+           height: 90vh;
+           border: 5px solid orange;
+           background-color: aliceblue;
+           z-index: 1000;
+           visibility: hidden;
+       }
         
     </style>
 </head>
 <body>
-            <div class="slide one rellax" data-rellax-speed="6" ></div>
-            <div class="slide two rellax" data-rellax-speed="2"></div>
-            <div class="slide three rellax" data-rellax-speed="5"></div>
-            <div class="slide four rellax" data-rellax-speed="2"></div>
-            <div class="slide five rellax" data-rellax-speed="6"></div>
-            <div class="slide six rellax" data-rellax-speed="10"></div>
+            <div class="slide one rellax" data-rellax-speed="6" >
+                <div class="img ione"></div>
+            </div>
+            <div class="slide two rellax" data-rellax-speed="2">
+                <div class="img itwo"></div>
+            </div>
+            <div class="slide three rellax" data-rellax-speed="5">
+                <div class="img ithree"></div>
+            </div>
+            <div class="slide four rellax" data-rellax-speed="2">
+                <div class="img ifour"></div>
+            </div>
+            <div class="slide five rellax" data-rellax-speed="6">
+                <div class="img ifive"></div>
+            </div>
+            <div class="slide six rellax" data-rellax-speed="10">
+                <div class="img isix"></div>
+            </div>
+            <div class="comment close">文案文案文案</div>
 </body>
 <script src="js/rellax.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
 <script>
-    // Also can pass in optional settings block
-    window.onload = function(){
-        var rellax = new Rellax('.rellax', {
-      speed: -2,
-      center: false,
-      wrapper: null,
-      round: true,
-      vertical: false,
-      horizontal: true
-    });
-    setInterval(function(){
-        console.log(window.scrollX)
-    },100)
-    }
-  </script>
-    <!-- <script>
-        window.addEventListener("scroll",function(e){
-            var one = document.querySelector(".one");
-            var two = document.querySelector(".two");
-            var three = document.querySelector(".three");
-            var four = document.querySelector(".four");
-            var five = document.querySelector(".five");
-            var six = document.querySelector(".six");
-            one.style.transfer = "translate3d("+100+"px,0px,0px)"
-            // console.log(outer.scrollTop)
-            console.log(one)
+$(document).ready(function(){
+    var rellax = new Rellax('.rellax', {
+        speed: -2,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: false,
+        horizontal: true
+    })
+    $(".img").click(function(){
+        // console.log(ssdf)
+        $(".comment").removeClass("close")
+        $(".comment").addClass("open")
+        
+    })
+    $(".comment").click(function(){
+        $(".comment").removeClass("open")
+        $(".comment").addClass("close")
+    })
+    
+})
 
-        })
-            
-    </script> -->
+   
+</script>
 </html>
+    // window.onload = function(){
+    //     var rellax = new Rellax('.rellax', {
+    //   speed: -2,
+    //   center: false,
+    //   wrapper: null,
+    //   round: true,
+    //   vertical: false,
+    //   horizontal: true
+    // });
+    // setInterval(function(){
+    //     console.log(window.scrollX)
+    // },100)
