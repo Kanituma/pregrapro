@@ -26,8 +26,8 @@
             left: 50%;
             top: 45%;
             transform: translate(-50%,-50%);
-            width: 270px;
-            height: 360px;
+            width: 240px;
+            height: 320px;
             /* z-index: 1000; */
         }
         .one {
@@ -44,11 +44,11 @@
         }
         
         .two {
-            width: 130vw;
+            width: 150vw;
             background-image: url(images/2.png);
             background-size:cover;
             z-index: 998;
-            left: 90vw;
+            left: 80vw;
         }
         .itwo {
             background-image: url(images/img2.jpg);
@@ -56,11 +56,11 @@
             left: 35%;
         }
         .three {
-            width: 100vw;
+            width: 120vw;
             background-image: url(images/3.png);
             background-size:cover;
             z-index:999;
-            left:210vw
+            left:220vw
         }
         .ithree {
             background-image: url(images/img3.jpg);
@@ -71,31 +71,31 @@
             background-image: url(images/4.png);
             background-size:cover;
             z-index:997;
-            left: 210vw;
+            left: 230vw;
         }
         .ifour {
             background-image: url(images/img4.jpg);
             background-size:contain;
-            left: 50%;
+            left: 55%;
         }
         .five {
             width: 130vw;
             background-image: url(images/5.png);
             background-size:cover;
             z-index:998;
-            left: 420vw;
+            left: 490vw;
         }
         .ifive {
             background-image: url(images/img5.jpg);
             background-size:contain;
-            left: 40%;
+            left: 45%;
         }
         .six {
             width: 120vw;
             background-image: url(images/6.png);
             background-size:cover;
             z-index:999;
-            left: 645vw;
+            left: 775vw;
         }
         .isix {
             background-image: url(images/img6.jpg);
@@ -137,12 +137,20 @@
            visibility: hidden;
         }
         .back {
-           position: absolute;
-           width: 12vw;
-           height:3vh;
-           background: #000;
-           right: 15px;
-           bottom: 20px;
+            position: absolute;
+            width: 25vw;
+            height:5vh;
+            background: #000;
+            right: 40px;
+            bottom: 60px;
+        }
+        .forward {
+            position: absolute;
+            width: 25vw;
+            height:5vh;
+            background: red;
+            left: 50px;
+            bottom: 60px;
         }
         #title {
             font-family:sans-serif;
@@ -182,7 +190,7 @@
             <div class="slide six rellax" data-rellax-speed="10">
                 <div class="img isix"></div>
             </div>
-            <div class="comment open">
+            <div class="comment close">
                 <p id="title">标题1标题1</p>
                 <p id="intro">文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1</p>
                 <div class="back"></div>
@@ -228,11 +236,7 @@ $(document).ready(function(){
     })
     
 })
-
-   
-</script>
-</html>
-    // window.onload = function(){
+  // window.onload = function(){
     //     var rellax = new Rellax('.rellax', {
     //   speed: -2,
     //   center: false,
@@ -244,3 +248,7 @@ $(document).ready(function(){
     // setInterval(function(){
     //     console.log(window.scrollX)
     // },100)
+   
+</script>
+</html>
+  
