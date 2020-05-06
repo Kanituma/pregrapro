@@ -9,6 +9,12 @@ html ,body{
     height:100vh;
     /* overflow-y: hidden; */
 }
+.outer {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 457vw;
+}
 .slide{
     position: absolute;
     height: 100vh;
@@ -25,7 +31,7 @@ html ,body{
 }
 .one {
     width: 120vw;
-    background-image: url(../images/1.png);
+    background-image: url(../images/wall1.png);
     background-size: cover;
     z-index:999;
     left: 0;
@@ -39,7 +45,7 @@ html ,body{
 
 .two {
     width: 150vw;
-    background-image: url(../images/2.png);
+    background-image: url(../images/wall2.png);
     background-size:cover;
     z-index: 997;
     left: 75vw;
@@ -52,7 +58,7 @@ html ,body{
 }
 .three {
     width: 120vw;
-    background-image: url(../images/3.png);
+    background-image: url(../images/wall3.png);
     background-size:cover;
     z-index:999;
     left:230vw
@@ -64,7 +70,7 @@ html ,body{
 }
 .four {
     width: 150vw;
-    background-image: url(../images/4.png);
+    background-image: url(../images/wall4.png);
     background-size:cover;
     z-index:997;
     left: 235vw;
@@ -77,7 +83,7 @@ html ,body{
 }
 .five {
     width: 130vw;
-    background-image: url(../images/5.png);
+    background-image: url(../images/wall5.png);
     background-size:cover;
     z-index:998;
     left: 490vw;
@@ -90,7 +96,7 @@ html ,body{
 }
 .six {
     width: 120vw;
-    background-image: url(../images/6.png);
+    background-image: url(../images/wall6.png);
     background-size:cover;
     z-index:999;
     left: 775vw;
@@ -210,36 +216,35 @@ html ,body{
 .pseven {
     z-index: 996;
     bottom: 16vh;
-    right: -180vw;
+    right: -200vw;
     width: 25vw;
 }
-#floor{
+/* #floor{
     position: absolute;
     background-image: url("../images/floor.png");
     background-size: cover;
-    width:1000vw;
+    width:1400vw;
     height: 40vh;
     bottom: 0;
     right: 0;
     z-index: 995;
-}
-/* #flrdiv {
+} */
+#flrdiv {
     position: absolute;
     height: 100vh;
     width: 120vw;
-    background-image: url(../images/6.png);
-    background-size:cover;
+    /* background-image: url(../images/6.png); */
+    /* background-size:cover; */
     z-index:995;
     left: 775vw;
-    overflow-x: hidden;
+    
 }
 #floor{
     position: absolute;
     background-image: url("../images/floor.png");
-    background-size: cover;
+    background-size: contain;
     width:1000vw;
-    height: 40vh;
+    height: 45vh;
     bottom: 0;
     right: 0;
-    /* z-index: 995; */
-} */
+}
