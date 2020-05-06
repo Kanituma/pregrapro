@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style2.css" type="text/css" />
+</head>
+<body>
+    <div class="outer">
+            <div class="slide one rellax" data-rellax-speed="5" >
+                <div class="img ione"></div>
+                <img src="images/plant1.png" class="plant pone rellax" data-rellax-speed="1.3">
+            </div>
+            
+            <div class="slide two rellax" data-rellax-speed="3">
+                <div class="img itwo"></div>
+                 <img src="images/plant1.png" class="plant ptwo rellax" data-rellax-speed="0.8">
+            </div>
+           
+            <div class="slide three rellax" data-rellax-speed="5">
+                <div class="img ithree"></div>
+                 <img src="images/plant1.png" class="plant pthree rellax" data-rellax-speed="1.3">
+            </div>
+           
+            <div class="slide four rellax" data-rellax-speed="2">
+                <div class="img ifour"></div>
+                 <img src="images/plant1.png" class="plant pfour rellax" data-rellax-speed="0.8">
+            </div>
+           
+            <div class="slide five rellax" data-rellax-speed="6">
+                <div class="img ifive"></div>
+                <img src="images/plant1.png" class="plant pfive rellax" data-rellax-speed="1.3">
+            </div>
+            
+            <div class="slide six rellax" data-rellax-speed="10">
+                <div class="img isix"></div>
+                <img src="images/plant1.png" class="plant psix rellax" data-rellax-speed="1.8">
+                <img src="images/plant1.png" class="plant pseven rellax" data-rellax-speed="3">
+                 <!-- <div id="floor" class="rellax" data-rellax-speed="8"><div> -->
+            </div>
+            <div id="flrdiv" class="rellax" data-rellax-speed="5">
+                <div id="floor"><div></div>
+            </div>
+            <!-- <div id="floor" class="rellax" data-rellax-speed="8"></div> -->
+            
+            <div class="comment close">
+                <p id="title">标题1标题1</p>
+                <p id="intro">文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1</p>
+                <div class="back"></div>
+                <div class="forward"></div>
+            </div>
+        
+</body>
+<script src="js/rellax.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
+<script>
+$(document).ready(function(){
+    var rellax = new Rellax('.rellax', {
+        speed: -2,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: false,
+        horizontal: true
+    })
+    $(".img").click(function(){
+        // console.log(ssdf)
+        $(".comment").removeClass("close")
+        $(".comment").addClass("open")
+        
+    })
+    $(".back").click(function(){
+        $(".comment").removeClass("open")
+        $(".comment").addClass("close")
+    })
+    var cmttxtArr = ["文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1文案1",
+    "文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2文案2",
+    "文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3文案3",
+    "文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4文案4",
+    "文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5文案5",
+    "文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6文案6"]
+    var titleArr = ["标题1标题1","标题2标题2","标题3标题3","标题4标题4","标题5标题5"]
+    // var cmtArr = [".ione",".itwo",".ithree",".ifour",".isix"]
+    $(".img").bind("click",function(){
+        // console.log($(".img").index($(this)))
+        var i = $(".img").index($(this))
+        console.log(cmttxtArr[i])
+        $(".comment p#title").html(titleArr[i])
+        $(".comment p#intro").html(cmttxtArr[i])
+    })
+    // if(window.scrollX)
+     setInterval(function(){
+        console.log(window.scrollX)
+        console.log(window.innerWidth)
+        // if(window.scrollX >=0 && window.scrollX <=220){
+        //     $("#floor").attr("data-rellax-speed","-12")
+        // }else if(window.scrollX >220 && window.scrollX <=420){
+        //     $("#floor").attr("data-rellax-speed","-12")
+        // }else if(window.scrollX >420 && window.scrollX <=580){
+        //     $("#floor").attr("data-rellax-speed","0")
+        // }
+    },100)
+    // if(window.scrollX >=500){
+    //     $("#floor").attr("data-rellax-speed","10")
+    // }
+    // console.log($("#floor").attr("data-rellax-speed"))
+    
+})
+  // window.onload = function(){
+    //     var rellax = new Rellax('.rellax', {
+    //   speed: -2,
+    //   center: false,
+    //   wrapper: null,
+    //   round: true,
+    //   vertical: false,
+    //   horizontal: true
+    // });
+    // setInterval(function(){
+    //     console.log(window.scrollX)
+    // },100)
+   
+</script>
+</html>
+  
