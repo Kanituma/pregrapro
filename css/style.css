@@ -26,7 +26,7 @@ html ,body{
 .one {
     width: 120vw;
     background-image: url(../images/wall1.png);
-    background-size:200% auto;
+    background-size: cover;
     z-index:999;
     left: 0;
 }
@@ -173,7 +173,7 @@ html ,body{
 }
 .pone {
     z-index: 1000;
-    bottom: 35vw;
+    bottom: 23.1vw;
     right: 0vw;
     width: 30vw;
 }
