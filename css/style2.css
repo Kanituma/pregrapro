@@ -57,7 +57,7 @@ html ,body{
     top: 35%
 }
 .three {
-    width: 120vw;
+    width: 140vw;
     background-image: url(../images/wall3.png);
     background-size:cover;
     z-index:999;
@@ -73,7 +73,7 @@ html ,body{
     background-image: url(../images/wall4.png);
     background-size:cover;
     z-index:997;
-    left: 235vw;
+    left: 260vw;
 }
 .ifour {
     background-image: url(../images/img4.jpg);
@@ -86,7 +86,7 @@ html ,body{
     background-image: url(../images/wall5.png);
     background-size:cover;
     z-index:998;
-    left: 490vw;
+    left: 510vw;
 }
 .ifive {
     background-image: url(../images/img5.jpg);
@@ -179,43 +179,43 @@ html ,body{
 }
 .pone {
     z-index: 1000;
-    bottom: 18vh;
+    bottom: 2vh;
     right: 0vw;
     width: 30vw;
 }
 .ptwo {
     z-index: 998;
-    bottom: 26vh;
+    bottom: 16vh;
     left: 50vw;
     width: 25vw;
 }
 .pthree {
     z-index: 999;
-    bottom: 19vh;
+    bottom: 8vh;
     right: -20vw;
     width: 25vw;
 }
 .pfour {
     z-index: 999;
-    bottom: 33vh;
+    bottom: 23vh;
     right: 0vw;
-    width: 25vw;
+    width: 23vw;
 }
 .pfive {
     z-index: 999;
-    bottom: 20vh;
+    bottom: 10vh;
     right: 0vw;
     width: 25vw;
 }
 .psix {
     z-index: 996;
-    bottom: 16vh;
+    bottom: 3vh;
     right: -25vw;
     width: 25vw;
 }
 .pseven {
     z-index: 996;
-    bottom: 16vh;
+    bottom: 3vh;
     right: -200vw;
     width: 25vw;
 }
