@@ -13,7 +13,7 @@ html ,body{
     overflow: hidden;
     position: relative;
     height: 100vh;
-    width: 457vw;
+    width: 600vw;
 }
 .slide{
     position: absolute;
@@ -30,16 +30,27 @@ html ,body{
     /* z-index: 1000; */
 }
 .one {
-    width: 120vw;
-    background-image: url(../images/wall1.png);
-    background-size: cover;
-    z-index:999;
+    /* display: inline-block; */
+    padding-left:50vw;
+    background: url(../images/wall1-l.png) no-repeat;
+    background-size: 55vh;
+    height: 100vh;
+    z-index:1000;
     left: 0;
+    /* bottom: 2vh; */
+}
+.one-r {
+    display: inline-block;
+    padding-right:60vw;
+    background: url(../images/wall1.png) no-repeat right;
+    background-size: calc(55vh + 3px);
+    /* z-index:1000; */
+    height: 100vh;
 }
 .ione {
     background-image: url(../images/img1.jpg);
     background-size:contain;
-    left: 45%;
+    /* left: 45%; */
     top: 45%;
 }
 
@@ -57,11 +68,21 @@ html ,body{
     top: 35%
 }
 .three {
-    width: 140vw;
-    background-image: url(../images/wall3.png);
-    background-size:cover;
+    padding-left: 60vw;
+    background: url(../images/wall3-l.png) no-repeat;
+    background-size:67vh;
+    height: 100vh;
     z-index:999;
-    left:230vw
+    left:230vw;
+    /* bottom: 10vw; */
+}
+.three-r {
+    display: inline-block;
+    padding-right:70vw;
+    background: url(../images/wall3.png) no-repeat right;
+    background-size: 72vh;
+    /* z-index:1000; */
+    height: 100vh;
 }
 .ithree {
     background-image: url(../images/img3.jpg);
@@ -78,7 +99,7 @@ html ,body{
 .ifour {
     background-image: url(../images/img4.jpg);
     background-size:contain;
-    left: 55%;
+    left: 48%;
     top: 30%;
 }
 .five {
@@ -99,7 +120,7 @@ html ,body{
     background-image: url(../images/wall6.png);
     background-size:cover;
     z-index:999;
-    left: 775vw;
+    left: 780vw;
 }
 .isix {
     background-image: url(../images/img6.jpg);
@@ -124,7 +145,7 @@ html ,body{
    height: 90vh;
    border: 5px solid orange;
    background-color: aliceblue;
-   z-index: 1000;
+   z-index: 100;
    visibility: visible;
 }
 .close{
@@ -138,7 +159,7 @@ html ,body{
    height: 90vh;
    border: 5px solid orange;
    background-color: white;
-   z-index: 1000;
+   z-index: 1001;
    visibility: hidden;
 }
 .back {
@@ -191,8 +212,8 @@ html ,body{
 }
 .pthree {
     z-index: 999;
-    bottom: 8vh;
-    right: -20vw;
+    bottom: 5vh;
+    right: 10vw;
     width: 25vw;
 }
 .pfour {
