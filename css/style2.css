@@ -50,10 +50,10 @@ html ,body{
 }
 .pic-s {
     position: absolute;
-    width: 60vw;
-    height: 80vw;
-    top: 6.5vw;
-    left: 7.5vw;
+    width: 58.5vw;
+    height: 78vw;
+    top: 7vw;
+    left: 8vw;
 }
 /* .img::after {
     position: absolute;
@@ -271,9 +271,9 @@ html ,body{
 }
 .pfive {
     z-index: 999;
-    bottom: 4vh;
-    right: -40vw;
-    width: 25vw;
+    bottom: 2vh;
+    right: 0vw;
+    width: 50vw;
 }
 .psix {
     z-index: 996;
