@@ -19,16 +19,51 @@ html ,body{
     position: absolute;
     height: 100vh;
 }
-.img {
+.img-b {
     position: absolute;
-    border:10px solid red;
+    /* border:10px solid red; */
     left: 50%;
     top: 45%;
     transform: translate(-50%,-50%);
-    width: 240px;
-    height: 320px;
+    width: 84vw;
+    height: 112vw;
     /* z-index: 1000; */
+   
 }
+.pic-b {
+    position: absolute;
+    width: 66vw;
+    height: 88vw;
+    top: 7.5vw;
+    left: 9vw;
+}
+.img-s {
+    position: absolute;
+    /* border:10px solid red; */
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    width: 75vw;
+    height: 100vw;
+    /* z-index: 1000; */
+       
+}
+.pic-s {
+    position: absolute;
+    width: 60vw;
+    height: 80vw;
+    top: 6.5vw;
+    left: 7.5vw;
+}
+/* .img::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 400px;
+    background-image: url(../images/frame.png);
+    z-index: 999;
+} */
 .one {
     /* display: inline-block; */
     padding-left:50vw;
@@ -46,11 +81,12 @@ html ,body{
     background-size: calc(55vh + 3px);
     /* z-index:1000; */
     height: 100vh;
+    /* box-shadow:30px 0 30px 0 rgba(255,255,255,.7) inset; */
 }
 .ione {
-    background-image: url(../images/img1.jpg);
+    background-image: url(../images/frame.png);
     background-size:contain;
-    /* left: 45%; */
+    left: 47%;
     top: 45%;
 }
 
@@ -62,7 +98,7 @@ html ,body{
     left: 75vw;
 }
 .itwo {
-    background-image: url(../images/img2.jpg);
+    background-image: url(../images/frame.png);
     background-size:contain;
     left: 50%;
     top: 35%
@@ -80,13 +116,14 @@ html ,body{
     display: inline-block;
     padding-right:70vw;
     background: url(../images/wall3.png) no-repeat right;
-    background-size: 72vh;
+    background-size: 73vh;
     /* z-index:1000; */
     height: 100vh;
 }
 .ithree {
-    background-image: url(../images/img3.jpg);
+    background-image: url(../images/frame.png);
     background-size:contain;
+    left: 46.5%;
     top: 42%;
 }
 .four {
@@ -94,39 +131,49 @@ html ,body{
     background-image: url(../images/wall4.png);
     background-size:cover;
     z-index:997;
-    left: 260vw;
+    left: 310vw;
 }
 .ifour {
-    background-image: url(../images/img4.jpg);
+    background-image: url(../images/frame.png);
     background-size:contain;
     left: 48%;
     top: 30%;
 }
 .five {
-    width: 130vw;
-    background-image: url(../images/wall5.png);
-    background-size:cover;
-    z-index:998;
+    display: inline-block;
+    padding-left: 65vw;
+    background: url(../images/wall5-l.png);
+    background-size:67vh;
+    height: 100vh;
+    z-index:999;
     left: 510vw;
 }
 .ifive {
-    background-image: url(../images/img5.jpg);
+    background-image: url(../images/frame.png);
     background-size:contain;
-    left: 45%;
-    top: 37%;
+    left: 50.5%;
+    top: 45%;
+}
+.five-r {
+    display: inline-block;
+    padding-right:70vw;
+    background: url(../images/wall5.png) no-repeat right;
+    background-size: 72vh;
+    /* z-index:1000; */
+    height: 100vh;
 }
 .six {
-    width: 120vw;
-    background-image: url(../images/wall6.png);
+    width: 140vw;
+    background: url(../images/wall6.png) no-repeat right;
     background-size:cover;
-    z-index:999;
-    left: 780vw;
+    z-index:998;
+    left: 530vw;
 }
 .isix {
-    background-image: url(../images/img6.jpg);
+    background-image: url(../images/frame.png);
     background-size:contain;
     left: 55%;
-    top: 44%;
+    top: 40%;
 }
 ::-webkit-scrollbar{
     display: none;
@@ -145,7 +192,7 @@ html ,body{
    height: 90vh;
    border: 5px solid orange;
    background-color: aliceblue;
-   z-index: 100;
+   z-index: 1000;
    visibility: visible;
 }
 .close{
@@ -200,45 +247,67 @@ html ,body{
 }
 .pone {
     z-index: 1000;
-    bottom: 2vh;
-    right: 0vw;
-    width: 30vw;
+    bottom: 0vh;
+    left: 1vw;
+    width: 100vw;
 }
 .ptwo {
     z-index: 998;
-    bottom: 16vh;
-    left: 50vw;
-    width: 25vw;
+    bottom: 13vh;
+    right: 0vw;
+    width: 65vw;
 }
 .pthree {
     z-index: 999;
-    bottom: 5vh;
-    right: 10vw;
-    width: 25vw;
+    bottom: 2vh;
+    left: 35vw;
+    width: 108vw;
 }
 .pfour {
     z-index: 999;
     bottom: 23vh;
-    right: 0vw;
-    width: 23vw;
+    left: 40vw;
+    width: 60vw;
 }
 .pfive {
     z-index: 999;
-    bottom: 10vh;
-    right: 0vw;
+    bottom: 4vh;
+    right: -40vw;
     width: 25vw;
 }
 .psix {
     z-index: 996;
     bottom: 3vh;
-    right: -25vw;
-    width: 25vw;
+    right: -40vw;
+    width: 80vw;
 }
-.pseven {
-    z-index: 996;
-    bottom: 3vh;
-    right: -200vw;
-    width: 25vw;
+.light {
+    /* display: inline-block; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    pointer-events: none;
+}
+.ltwo {
+    left: 21%;
+    top: -3vh;
+    
+}
+.lthree {
+    left: 25%;
+    top: -1vh;
+}
+.lfour {
+    left: 34%;
+    top: -5vh;
+}
+.lfive {
+    left: 48%;
+}
+.lsix {
+    left: 40%;
+    top: -1vh;
 }
 /* #floor{
     position: absolute;
@@ -250,6 +319,7 @@ html ,body{
     right: 0;
     z-index: 995;
 } */
+
 #flrdiv {
     position: absolute;
     height: 100vh;
