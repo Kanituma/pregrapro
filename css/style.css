@@ -215,8 +215,8 @@ html ,body{
 .psix {
     z-index: 996;
     bottom: 3vh;
-    right: -40vw;
-    width: 80vw;
+    right: -35vw;
+    width: 70vw;
 }
 .light {
     /* display: inline-block; */
