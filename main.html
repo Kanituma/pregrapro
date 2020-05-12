@@ -8,8 +8,11 @@
 </head>
 <body>
     <div class="page1">
-        <video id="open" src="video/opening.mp4" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portrait" autoplay/>
+        <div id="opbtn"></div>
+        <!-- <video id="open" src="video/opening.mp4" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portrait" autoplay/> -->
+        <video id="open" src="video/opening.mp4" autoplay/>
     </div>
+    
     <div class="outer">
             <div class="slide one rellax" data-rellax-speed="5" >
                 <span class="one-r"></span>
@@ -78,6 +81,7 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
 <script>
 $(document).ready(function(){
+    var flag = true;
     $(window).resize(function(){
         $("#open").css("width",$(window).innerWidth + "px");
         $("#open").css("height",$(window).innerHeight + "px");
@@ -131,6 +135,13 @@ $(document).ready(function(){
         //     $("#floor").attr("data-rellax-speed","0")
         // }
         console.log($("#open")[0].currentTime);
+        var t = $("#open")[0].currentTime;
+        
+        if(t >= 4 && flag == true){
+            $("#open").trigger("pause");
+            $("#opbtn").css("opacity","1")
+            flag = false;
+        }
        
     },100)
 
@@ -138,7 +149,12 @@ $(document).ready(function(){
         var w = $("#ssix").offset().left + $("#ssix").width()
         $(".outer").css("width",w)
     })
-
+    $("#opbtn").click(function(){
+        console.log("点啦")
+        $("#open").trigger("play");
+        // console.log(flag);
+        $("#opbtn").css("opacity","0")
+    })
     console.log($("#open"))
     
     // if(window.scrollX >=500){
