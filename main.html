@@ -78,6 +78,10 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
 <script>
 $(document).ready(function(){
+    $(window).resize(function(){
+        $("#open").css("width",$(window).innerWidth + "px");
+        $("#open").css("height",$(window).innerHeight + "px");
+    });
     var rellax = new Rellax('.rellax', {
         speed: -2,
         center: false,
@@ -126,23 +130,23 @@ $(document).ready(function(){
         // }else if(window.scrollX >420 && window.scrollX <=580){
         //     $("#floor").attr("data-rellax-speed","0")
         // }
+        console.log($("#open")[0].currentTime);
+       
     },100)
 
     $(document).scroll(function() {
         var w = $("#ssix").offset().left + $("#ssix").width()
         $(".outer").css("width",w)
     })
-    $(window).resize(function(){
-        $("#open").css("width",$(window).innerWidth + "px");
-        $("#open").css("height",$(window).innerHeight + "px");
-    });
+
+    console.log($("#open"))
     
     // if(window.scrollX >=500){
     //     $("#floor").attr("data-rellax-speed","10")
     // }
     // console.log($("#floor").attr("data-rellax-speed"))
-    
 })
+    
   // window.onload = function(){
     //     var rellax = new Rellax('.rellax', {
     //   speed: -2,
