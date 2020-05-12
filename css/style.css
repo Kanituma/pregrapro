@@ -61,7 +61,7 @@ video {
     width: 100vw;
     height: 100vh;
     opacity: 1;
-    transition: all 1.5s;
+    transition: all 2s;
     z-index: 1002;
     background: #fff;
     pointer-events: none;
