@@ -83,7 +83,11 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
 <script>
 $(document).ready(function(){
-    $("#open").trigger("play");
+    $(window).click(function(){
+        // $("#open").trigger("play");
+        console.log("sdf")
+    })
+    
     var flag = true;
     
     $(window).resize(function(){
