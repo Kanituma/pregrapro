@@ -29,7 +29,7 @@ html ,body{
     position: absolute;
     overflow: hidden;
     transition: 2s;
-    z-index: 1003;
+    z-index: 1005;
 
 }
 
