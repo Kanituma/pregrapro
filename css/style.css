@@ -28,7 +28,7 @@ html ,body{
     height: 100vh;
     position: absolute;
     overflow: hidden;
-    transition: 2s;
+    transition: 1s;
     z-index: 1005;
 
 }
@@ -61,7 +61,7 @@ video {
     width: 100vw;
     height: 100vh;
     opacity: 1;
-    transition: all 2s;
+    transition: all 1s;
     z-index: 1002;
     background: #fff;
     pointer-events: none;
@@ -275,9 +275,9 @@ video {
 }
 .pfive {
     z-index: 999;
-    bottom: 2vh;
+    bottom: 0vh;
     right: 0vw;
-    width: 50vw;
+    width: 40vw;
 }
 .psix {
     z-index: 996;

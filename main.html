@@ -10,7 +10,7 @@
     <div class="page1">
         <div id="opbtn"></div>
         <!-- <video id="open" src="video/opening.mp4" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portrait" autoplay/> -->
-        <video id="open" src="video/opening.mp4"  x5-video-player-type="h5" x5-video-orientation="h5" x5-video-player-fullscreen="true" muted/>
+        <video id="open" src="video/opening.mp4"  x5-video-player-type="h5" x5-video-orientation="h5" x5-video-player-fullscreen="true" playsinline x-webkit-airplay="true" webkit-playsinline muted/>
     </div>
     <div class="white"></div>
     <div class="page2">
@@ -54,7 +54,7 @@
                     <img src="images/p5.png" class="pic-b">
                 </div>
                 <img src="images/light-b.png" class="light lfive rellax" data-rellax-speed="1">
-                <img src="images/ban5.png" class="plant pfive rellax" data-rellax-speed="0.8">
+                <img src="images/cat5.png" class="plant pfive rellax" data-rellax-speed="0.8">
             </div>
             
             <div class="slide six rellax" data-rellax-speed="4" id="ssix">
@@ -62,7 +62,7 @@
                     <img src="images/p6.png" class="pic-s">
                 </div>
                 <img src="images/light-s.png" class="light lsix rellax" data-rellax-speed="0.5">
-                <img src="images/sofa6.png" class="plant psix rellax" data-rellax-speed="1.8">
+                <!-- <img src="images/sofa6.png" class="plant psix rellax" data-rellax-speed="1.8"> -->
                  <!-- <div id="floor" class="rellax" data-rellax-speed="8"><div> -->
             </div>
             <div class="slide seven rellax" data-rellax-speed="4" >
@@ -83,12 +83,17 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
 <script>
 
-$(window).click(function(){
-        $("#open").trigger("play");
-        console.log("sdf")
-    })
+
 $(document).ready(function(){
-    
+    var vflag=true
+    $(window).click(function(){
+        if(vflag){
+            $("#open").trigger("play");
+            console.log("sdf");
+            vflag = false
+        }
+        
+    })
     
     var flag = true;
     
@@ -154,12 +159,13 @@ $(document).ready(function(){
             $("#opbtn").css("opacity","1")
             flag = false;
         }
-        if(t >= 6){
+        if(t >= 5.2){
             $(".white").css("opacity","0")
             $(".page1").css("display","none")
             
             
             $(".page2").css("display","block")
+            $("video").css("display","none")
             // $(".page2").removeClass("dnone")
             // $("body,html").css("overflow","scroll")
             setTimeout(function(){
