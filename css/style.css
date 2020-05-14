@@ -33,8 +33,7 @@ html ,body{
 
 }
 
-video {
-    /* width: 100%; */
+/* video {
     height: 100%;   
     position: absolute;
     bottom: 0;
@@ -42,6 +41,33 @@ video {
     transform:translateX(-50%);
     pointer-events: none;
     z-index: 1002;
+} */
+#open {
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1.2);
+    background-image: url('../images/sprite.png');
+    width: 400px;
+    height: 640px;
+    animation: anim1 5s 2s steps(84) both;
+    background-size: cover;
+    z-index: 1000;
+    pointer-events: none;
+    /* transition: 0.2s; */
+}
+@keyframes anim1 {
+    from{
+        background-position: 0px
+    }
+    to { background-position: -33600px; }
+}
+@keyframes anim2 {
+    from{
+        background-position: -33600px
+    }
+    to { background-position: -42800px; }
 }
 #opbtn {
     width: 40vw;
@@ -56,6 +82,7 @@ video {
     z-index: 1003;
     background: #826;
 }
+
 .white {
     position: absolute;
     width: 100vw;
