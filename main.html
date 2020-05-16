@@ -62,8 +62,8 @@
                 </div>
                 <img src="images/light-s.png" class="light lsix rellax" data-rellax-speed="0.5">
             </div>
-            <div class="slide seven rellax" data-rellax-speed="4" >
-            </div>
+            <!-- <div class="slide seven rellax" data-rellax-speed="4" >
+            </div> -->
             <div id="flrdiv" class="rellax" data-rellax-speed="5">
                 <div id="floor"></div>
             </div>
@@ -73,11 +73,13 @@
 <script>
 // window.addEventListener("load",muApp,false)
 window.onload = function(){
-    $("#open").css("animation","anim1 5s 2s steps(84) both")
     var h = $(window).height();
     var times = h / 640;
     console.log(times)
     $("#open").css("transform","translate(-50%,-50%) scale("+times+")")
+    // $("#open").css("animation","anim1 5s 2s steps(84) both")
+    $("#open").css("animation","anim1 5s 2s steps(76) both")
+    
     
     var flag = true;
     
@@ -89,11 +91,7 @@ window.onload = function(){
         vertical: false,
         horizontal: true
     })
-    $(".img").click(function(){
-        $(".comment").removeClass("close")
-        $(".comment").addClass("open")
-        
-    })
+    
     
     var flag = true;
      setInterval(function(){
@@ -107,7 +105,8 @@ window.onload = function(){
                 console.log(flag)
             }
             if(flag == false){
-                    $(".page2").css("display","block")
+                    // $(".page2").css("display","block")
+                    
                     $(".white").css("opacity","0")
                     $(".page1").css("display","none")
                     
@@ -116,17 +115,23 @@ window.onload = function(){
         });
         console.log(flag)
     },100)
-
+    $("#opbtn").click(function(){
+        console.log("点啦")
+        // $("#open").css("animation","anim2 1s 1s steps(23) both")
+        $("#open").css("animation","anim2 1s 1s steps(17) both")
+        // console.log(flag);
+        $("#opbtn").css("opacity","0")
+    })
     $(document).scroll(function() {
         var w = $("#ssix").offset().left + $("#ssix").width()
         $(".page2").css("width",w)
         console.log(w)
     })
-    $("#opbtn").click(function(){
-        console.log("点啦")
-        $("#open").css("animation","anim2 1s 1s steps(23) both")
-        // console.log(flag);
-        $("#opbtn").css("opacity","0")
+    
+    $(".img").click(function(){
+        $(".comment").removeClass("close")
+        $(".comment").addClass("open")
+        
     })
 }
 

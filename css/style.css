@@ -48,7 +48,7 @@ html ,body{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%) scale(1.2);
-    background-image: url('../images/sprite.png');
+    background-image: url('../images/sprite2.jpg');
     width: 400px;
     height: 640px;
     /* animation: anim1 5s 2s steps(84) both; */
@@ -57,17 +57,29 @@ html ,body{
     pointer-events: none;
     /* transition: 0.2s; */
 }
-@keyframes anim1 {
+/* @keyframes anim1 {
     from{
         background-position: 0px
     }
     to { background-position: -33600px; }
-}
-@keyframes anim2 {
+} */
+/* @keyframes anim2 {
     from{
         background-position: -33600px
     }
     to { background-position: -42800px; }
+} */
+@keyframes anim1 {
+    from{
+        background-position: 0px
+    }
+    to { background-position: -30400px; }
+}
+@keyframes anim2 {
+    from{
+        background-position: -30400px
+    }
+    to { background-position: -37200px; }
 }
 #opbtn {
     width: 40vw;
@@ -98,7 +110,8 @@ html ,body{
     position: relative;
     height: 100vh;
     width: 600vw;
-    display:none;
+    /* display:none; */
+    z-index: -999;
     /* transition: 1s; */
     /* opacity: 0; */
 }
