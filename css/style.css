@@ -48,7 +48,7 @@ html ,body{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%) scale(1.2);
-    background-image: url('../images/sprite2.jpg');
+    background-image: url('../images/sprite.jpg');
     width: 400px;
     height: 640px;
     /* animation: anim1 5s 2s steps(84) both; */
