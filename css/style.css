@@ -370,53 +370,6 @@ html ,body{
     bottom: 0;
     right: 0;
 }
-.comment {
-    /* pointer-events: none; */
-}
-.open{
-   position: fixed;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%,-50%)scale(1);
-   transition: 0.3s ease;
-   opacity: 1;
-   width: 90vw;
-   height: 90vh;
-   border: 5px solid orange;
-   background-color: aliceblue;
-   z-index: 1001;
-   visibility: visible;
-}
-.close{
-   position: fixed;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%,-50%) scale(0.9);
-   transition: 0.3s ease;
-   opacity: 0;
-   width: 90vw;
-   height: 90vh;
-   border: 5px solid orange;
-   background-color: white;
-   z-index: 1002;
-   visibility: hidden;
-}
-.back {
-    position: absolute;
-    width: 25vw;
-    height:5vh;
-    background: #000;
-    right: 40px;
-    bottom: 60px;
-}
-.forward {
-    position: absolute;
-    width: 25vw;
-    height:5vh;
-    background: red;
-    left: 50px;
-    bottom: 60px;
-}
 #title {
     font-family:sans-serif;
     text-align: center;
