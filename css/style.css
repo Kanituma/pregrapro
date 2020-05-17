@@ -21,7 +21,8 @@ html ,body{
     background: #30708d;
     /* opacity:0 */
     pointer-events: none;
-    transition: 2s;
+    
+    z-index: 1010;
 }
 .loader{
     position: absolute;
@@ -39,10 +40,10 @@ html ,body{
     z-index: 1004;
     /* background: #000; */
 }
-/* svg path,
+svg path,
 svg rect{
   fill: #fff;
-} */
+}
 /* body{
     width: auto;
     height:100vh;

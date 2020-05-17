@@ -14,17 +14,17 @@
             <rect x="0" y="0" width="5" height="25" fill="#333">
                 <animate attributeName="opacity" attributeType="XML"
                 values="1; .2; 1" 
-                begin="0s" dur="1.6s" repeatCount="indefinite" />
+                begin="0s" dur="0.6s" repeatCount="indefinite" />
             </rect>
             <rect x="10" y="0" width="5" height="25" fill="#333">
                 <animate attributeName="opacity" attributeType="XML"
                 values="1; .2; 1" 
-                begin="0.6s" dur="1.6s" repeatCount="indefinite" />
+                begin="0.2s" dur="0.6s" repeatCount="indefinite" />
             </rect>
             <rect x="20" y="0" width="5" height="25" fill="#333">
                 <animate attributeName="opacity" attributeType="XML"
                 values="1; .2; 1" 
-                begin="1.2s" dur="1.6s" repeatCount="indefinite" />
+                begin="1.4s" dur="0.6s" repeatCount="indefinite" />
             </rect>
             </svg>
         </div>
@@ -92,11 +92,31 @@
             </div>
     </div>   
 </body>
-
+<script src="js/rellax.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script>
 
 // window.addEventListener("load",muApp,false)
-window.onload = function(){
+// window.onload = function(){
+var queue = new createjs.LoadQueue(false);
+queue.on("progress",event =>{
+    console.log("loading...")
+    $("#loading").css("transition","2s")
+})
+queue.on("complete",event =>{
+    // MuApp();
+    
+})
+queue.on("fileload",MuApp)
+//大于500k的预加载
+queue.loadFile("images/sprite.jpg")
+queue.loadFile("images/floor.png")
+queue.loadFile("images/wall4.png")
+queue.loadFile("images/wall2.png")
+queue.loadFile("images/wall6.png")
+queue.loadFile("images/wall5.png")
+function MuApp(){
     console.log("OKok")
     $("#loading").css("opacity","0");
     var h = $(window).height();
@@ -163,7 +183,6 @@ window.onload = function(){
 }
 
 </script>
-<script src="js/rellax.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
+
 </html>
   
