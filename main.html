@@ -8,26 +8,27 @@
 </head>
 <body>
     <div id="loading">
-        <div class="loader" title="6">
+        <!-- <div class="loader" title="6">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
             <rect x="0" y="0" width="5" height="25" fill="#333">
                 <animate attributeName="opacity" attributeType="XML"
                 values="1; .2; 1" 
-                begin="0s" dur="0.6s" repeatCount="indefinite" />
+                begin="-0.5s" dur="0.6s" repeatCount="indefinite" />
             </rect>
             <rect x="10" y="0" width="5" height="25" fill="#333">
                 <animate attributeName="opacity" attributeType="XML"
                 values="1; .2; 1" 
-                begin="0.2s" dur="0.6s" repeatCount="indefinite" />
+                begin="-0.3s" dur="0.6s" repeatCount="indefinite" />
             </rect>
             <rect x="20" y="0" width="5" height="25" fill="#333">
                 <animate attributeName="opacity" attributeType="XML"
                 values="1; .2; 1" 
-                begin="1.4s" dur="0.6s" repeatCount="indefinite" />
+                begin="-0.1s" dur="0.6s" repeatCount="indefinite" />
             </rect>
             </svg>
-        </div>
+        </div> -->
+        <img class="loader" src="images/load.gif">
     </div>
     <!-- <div id="load"></div> -->
     <div class="page1">
@@ -102,10 +103,11 @@
 var queue = new createjs.LoadQueue(false);
 queue.on("progress",event =>{
     console.log("loading...")
-    $("#loading").css("transition","2s")
+    $("#loading").css("transition","1.7s")
 })
 queue.on("complete",event =>{
     // MuApp();
+    console.log("done!")
     
 })
 queue.on("fileload",MuApp)
@@ -118,14 +120,15 @@ queue.loadFile("images/wall6.png")
 queue.loadFile("images/wall5.png")
 function MuApp(){
     console.log("OKok")
-    $("#loading").css("opacity","0");
+    $(".loader").css("opacity","0");
+    setTimeout(function(){$("#loading").css("opacity","0");},100)
     var h = $(window).height();
     var times = h / 640;
     console.log(times)
     
     $("#open").css("transform","translate(-50%,-50%) scale("+times+")")
     // $("#open").css("animation","anim1 5s 2s steps(84) both")
-    $("#open").css("animation","anim1 5s 2s steps(76) both")
+    $("#open").css("animation","anim1 5s 1s steps(76) both")
     
     
     

@@ -24,22 +24,25 @@ html ,body{
     
     z-index: 1010;
 }
-.loader{
+/* .loader{
     position: absolute;
-    /* margin: 0 0 2em; */
-    /* height: 100px; */
-    /* width: 50vw; */
     text-align: center;
     padding: 1em;
-    /* margin: 0 auto 1em; */
-    /* display: inline-block; */
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
     vertical-align: top;
     z-index: 1004;
-    /* background: #000; */
+} */
+.loader{
+    width: 20vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition:1.5s
 }
+
 svg path,
 svg rect{
   fill: #fff;
