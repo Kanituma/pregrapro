@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 <body>
+    <div id="loading">
+        <div class="loader" title="6">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <rect x="0" y="0" width="5" height="25" fill="#333">
+                <animate attributeName="opacity" attributeType="XML"
+                values="1; .2; 1" 
+                begin="0s" dur="1.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="10" y="0" width="5" height="25" fill="#333">
+                <animate attributeName="opacity" attributeType="XML"
+                values="1; .2; 1" 
+                begin="0.6s" dur="1.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="20" y="0" width="5" height="25" fill="#333">
+                <animate attributeName="opacity" attributeType="XML"
+                values="1; .2; 1" 
+                begin="1.2s" dur="1.6s" repeatCount="indefinite" />
+            </rect>
+            </svg>
+        </div>
+    </div>
+    <!-- <div id="load"></div> -->
     <div class="page1">
         <div id="opbtn"></div>
         <div id="open"></div>
@@ -67,30 +90,24 @@
             <div id="flrdiv" class="rellax" data-rellax-speed="5">
                 <div id="floor"></div>
             </div>
-        
+    </div>   
 </body>
 
 <script>
+
 // window.addEventListener("load",muApp,false)
 window.onload = function(){
+    $("#loading").css("opacity","0");
     var h = $(window).height();
     var times = h / 640;
     console.log(times)
+    
     $("#open").css("transform","translate(-50%,-50%) scale("+times+")")
     // $("#open").css("animation","anim1 5s 2s steps(84) both")
     $("#open").css("animation","anim1 5s 2s steps(76) both")
     
     
-    var flag = true;
     
-    var rellax = new Rellax('.rellax', {
-        speed: -2,
-        center: false,
-        wrapper: null,
-        round: true,
-        vertical: false,
-        horizontal: true
-    })
     
     
     var flag = true;
@@ -98,6 +115,7 @@ window.onload = function(){
         
         $('#open').on('animationend webkitAnimationEnd', function() { 
             if(flag == true){
+                // $("#loading").css("display","none");
                 $("#opbtn").css("opacity","1");
                 setTimeout(function(){
                     flag = false;
@@ -121,6 +139,14 @@ window.onload = function(){
         $("#open").css("animation","anim2 1s 1s steps(17) both")
         // console.log(flag);
         $("#opbtn").css("opacity","0")
+    })
+    var rellax = new Rellax('.rellax', {
+        speed: -2,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: false,
+        horizontal: true
     })
     $(document).scroll(function() {
         var w = $("#ssix").offset().left + $("#ssix").width()
