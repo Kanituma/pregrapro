@@ -102,12 +102,12 @@
 // window.onload = function(){
 var queue = new createjs.LoadQueue(false);
 queue.on("progress",event =>{
-    console.log("loading...")
+    // console.log("loading...")
     $("#loading").css("transition","1.7s")
 })
 queue.on("complete",event =>{
     // MuApp();
-    console.log("done!")
+    // console.log("done!")
     
 })
 queue.on("fileload",MuApp)
@@ -119,12 +119,12 @@ queue.loadFile("images/wall2.png")
 queue.loadFile("images/wall6.png")
 queue.loadFile("images/wall5.png")
 function MuApp(){
-    console.log("OKok")
+    // console.log("OKok")
     $(".loader").css("opacity","0");
     setTimeout(function(){$("#loading").css("opacity","0");},100)
     var h = $(window).height();
     var times = h / 640;
-    console.log(times)
+    // console.log(times)
     
     $("#open").css("transform","translate(-50%,-50%) scale("+times+")")
     // $("#open").css("animation","anim1 5s 2s steps(84) both")
@@ -155,10 +155,10 @@ function MuApp(){
             }
              
         });
-        console.log(flag)
+        // console.log(flag)
     },100)
     $("#opbtn").click(function(){
-        console.log("点啦")
+        // console.log("点啦")
         // $("#open").css("animation","anim2 1s 1s steps(23) both")
         $("#open").css("animation","anim2 1s 1s steps(17) both")
         // console.log(flag);
@@ -175,7 +175,7 @@ function MuApp(){
     $(document).scroll(function() {
         var w = $("#ssix").offset().left + $("#ssix").width()
         $(".page2").css("width",w)
-        console.log(w)
+        // console.log(w)
     })
     
     $(".img").click(function(){

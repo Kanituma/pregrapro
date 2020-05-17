@@ -119,9 +119,9 @@ svg rect{
     to { background-position: -37200px; }
 }
 #opbtn {
-    width: 40vw;
-    height: 15vw;
-    border: 1px solid #000;
+    width: 60vw;
+    height: 19.2vw;
+    /* border: 1px solid #000; */
     position: absolute;
     bottom: 40vh;
     left: 50%;
@@ -129,7 +129,8 @@ svg rect{
     transition: all 0.8s;
     opacity: 0;
     z-index: 1003;
-    background: #826;
+    background-image: url("../images/button.png") ;
+    background-size:cover;
 }
 
 .white {
