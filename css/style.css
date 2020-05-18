@@ -7,33 +7,19 @@
 html ,body{
     width: auto;
     height:100vh;
-    /* overflow: hidden; */
 }
-/* #load {
-    width: 100%;
-    height: 100%;
-    background: none;
-} */
+
 #loading {
     position: absolute;
     width: 100vw;
     height: 100vh;
     background: #30708d;
-    /* opacity:0 */
     pointer-events: none;
-    
+    /* 记得删掉 */
+    /* display: none; */
     z-index: 1010;
 }
-/* .loader{
-    position: absolute;
-    text-align: center;
-    padding: 1em;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    vertical-align: top;
-    z-index: 1004;
-} */
+
 .loader{
     width: 20vw;
     position: absolute;
@@ -42,25 +28,9 @@ html ,body{
     transform: translate(-50%,-50%);
     transition:1.5s
 }
-
-svg path,
-svg rect{
-  fill: #fff;
-}
-/* body{
-    width: auto;
-    height:100vh;
-    
-} */
-/* .dnone {
-    display: none;
-} */
-/* .outer {
-    width: 550vw;
-    height: 100%;
-    position: relative;
-} */
 .page1 {
+    /* 记得删掉 */
+    /* display: none; */
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -70,58 +40,43 @@ svg rect{
 
 }
 
-/* video {
-    height: 100%;   
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform:translateX(-50%);
-    pointer-events: none;
-    z-index: 1002;
-} */
 #open {
     
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%) scale(1.2);
-    background-image: url('../images/sprite.jpg');
+    /* background-image: url('../images/sprite.jpg'); */
     width: 400px;
     height: 640px;
-    /* animation: anim1 5s 2s steps(84) both; */
     background-size: cover;
     z-index: 1000;
     pointer-events: none;
-    /* transition: 0.2s; */
+    overflow: hidden;
 }
-/* @keyframes anim1 {
-    from{
-        background-position: 0px
-    }
-    to { background-position: -33600px; }
-} */
-/* @keyframes anim2 {
-    from{
-        background-position: -33600px
-    }
-    to { background-position: -42800px; }
-} */
+#openani {
+    height: 100%;
+    transition: 1s;
+}
 @keyframes anim1 {
     from{
-        background-position: 0px
+        /* background-position: 0px */
+        transform: translateX(0px);
     }
-    to { background-position: -30400px; }
+    to { 
+        /* background-position: -30400px;  */
+        transform: translateX(-30400px);
+    }
 }
 @keyframes anim2 {
     from{
-        background-position: -30400px
+        transform: translateX(-30400px);
     }
-    to { background-position: -37200px; }
+    to { transform: translateX(-37200px);}
 }
 #opbtn {
-    width: 60vw;
-    height: 19.2vw;
-    /* border: 1px solid #000; */
+    width: 55vw;
+    height: 17.6vw;
     position: absolute;
     bottom: 40vh;
     left: 50%;
@@ -148,10 +103,7 @@ svg rect{
     position: relative;
     height: 100vh;
     width: 600vw;
-    /* display:none; */
-    z-index: -999;
-    /* transition: 1s; */
-    /* opacity: 0; */
+    z-index: 1000;
 }
 .slide{
     position: absolute;
@@ -159,15 +111,14 @@ svg rect{
 }
 .img-b {
     position: absolute;
-    /* border:10px solid red; */
     left: 50%;
     top: 45%;
     transform: translate(-50%,-50%);
     width: 84vw;
     height: 112vw;
-    /* z-index: 1000; */
    
 }
+
 .pic-b {
     position: absolute;
     width: 66vw;
@@ -177,13 +128,11 @@ svg rect{
 }
 .img-s {
     position: absolute;
-    /* border:10px solid red; */
     left: 50%;
     top: 45%;
     transform: translate(-50%,-50%);
     width: 75vw;
     height: 100vw;
-    /* z-index: 1000; */
        
 }
 .pic-s {
@@ -193,33 +142,43 @@ svg rect{
     top: 7vw;
     left: 8vw;
 }
-/* .img::after {
+.mask {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 300px;
-    height: 400px;
-    background-image: url(../images/frame.png);
-    z-index: 999;
-} */
-.one {
+    width: 50%;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /* background: #000; */
+    display: flex;
+    flex-flow: column;
+    justify-content:center;
+    align-items: center;
+}
+.mask #click {
     /* display: inline-block; */
+    width: 22%;
+}
+.mask #clrm {
+    /* display: inline-block; */
+    width: 57%
+    
+}
+
+.one {
     padding-left:50vw;
     background: url(../images/wall1-l.png) no-repeat;
     background-size: 55vh;
     height: 100vh;
     z-index:1000;
     left: 0;
-    /* bottom: 2vh; */
 }
 .one-r {
     display: inline-block;
     padding-right:60vw;
     background: url(../images/wall1.png) no-repeat right;
     background-size: calc(55vh + 3px);
-    /* z-index:1000; */
     height: 100vh;
-    /* box-shadow:30px 0 30px 0 rgba(255,255,255,.7) inset; */
 }
 .ione {
     background-image: url(../images/frame.png);
@@ -248,14 +207,12 @@ svg rect{
     height: 100vh;
     z-index:999;
     left:230vw;
-    /* bottom: 10vw; */
 }
 .three-r {
     display: inline-block;
     padding-right:70vw;
     background: url(../images/wall3.png) no-repeat right;
     background-size: 73vh;
-    /* z-index:1000; */
     height: 100vh;
 }
 .ithree {
@@ -297,7 +254,6 @@ svg rect{
     padding-right:70vw;
     background: url(../images/wall5.png) no-repeat right;
     background-size: 72vh;
-    /* z-index:1000; */
     height: 100vh;
 }
 .six {
@@ -364,7 +320,6 @@ svg rect{
     width: 70vw;
 }
 .light {
-    /* display: inline-block; */
     position: absolute;
     left: 0;
     top: 0;
@@ -391,23 +346,11 @@ svg rect{
     left: 40%;
     top: -1vh;
 }
-/* #floor{
-    position: absolute;
-    background-image: url("../images/floor.png");
-    background-size: cover;
-    width:1400vw;
-    height: 40vh;
-    bottom: 0;
-    right: 0;
-    z-index: 995;
-} */
 
 #flrdiv {
     position: absolute;
     height: 100vh;
     width: 120vw;
-    /* background-image: url(../images/6.png); */
-    /* background-size:cover; */
     z-index:995;
     left: 775vw;
     
