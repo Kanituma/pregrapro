@@ -4,13 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style2.css">
 </head>
-<style>
-    p {
-        font-size: 6rem;
-    }
-</style>
+
 <body>
-    <p>拼图！拼图！拼图！拼图！</p>
+	<div class="scrollEle">
+		<div class="pframe">
+			<svg width="600" height="600" id="puzzle" viewBox="0,0,600,600">
+				<g id="back"><image xlink:href="img/pikachu.png" width="200" height="200" x="100" y="50"></g>
+				<g class="piece" id="0"><image xlink:href="img/1.png" class="movil"></g>
+				<g class="piece" id="1"><image xlink:href="img/2.png" class="movil"></g>
+				<g class="piece" id="2"><image xlink:href="img/3.png" class="movil"></g>
+				<g class="piece" id="3"><image xlink:href="img/4.png" class="movil"></g>
+				<g class="piece" id="4"><image xlink:href="img/5.png" class="movil"></g>
+				<g class="piece" id="5"><image xlink:href="img/6.png" class="movil"></g>
+				<g class="piece" id="6"><image xlink:href="img/7.png" class="movil"></g>
+				<g class="piece" id="7"><image xlink:href="img/8.png" class="movil"></g>
+				<g class="piece" id="8"><image xlink:href="img/9.png" class="movil"></g>
+			</svg>
+	</div>
+</div>
 </body>
 </html>
+<script src="js/puzzle.js"></script>
+<script>
+var startX = 0, startY = 0;
+ 
+ function touchStart(e) {
+   try {
+	 var touch = e.touches[0],
+	   x = Number(touch.pageX),
+	   y = Number(touch.pageY);
+	 startX = x;
+	 startY = y;
+   } catch (e) {
+	 alert(e);
+   }
+ }
+
+ document.addEventListener('touchstart', touchStart);
+ var ele = document.querySelector('.scrollEle');
+ ele.ontouchmove = function (e) {
+   var point = e.touches[0],
+	 eleTop = ele.scrollTop,
+	 eleScrollHeight = ele.scrollHeight,
+	 eleOffsetHeight = ele.offsetHeight,
+	 eleTouchBottom = eleScrollHeight - eleOffsetHeight;
+   if (eleTop === 0) {
+	 if (point.clientY > startY) {
+	   e.preventDefault();
+	 }
+   }
+   else if (eleTop === eleTouchBottom) {
+	 if (point.clientY < startY) {
+	   e.preventDefault()
+	 }
+   }
+
+ }
+</script>

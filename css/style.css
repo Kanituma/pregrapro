@@ -114,33 +114,33 @@ html ,body{
     left: 50%;
     top: 45%;
     transform: translate(-50%,-50%);
-    width: 84vw;
+    width: 79vw;
     height: 112vw;
    
 }
 
 .pic-b {
     position: absolute;
-    width: 66vw;
-    height: 88vw;
-    top: 7.5vw;
-    left: 9vw;
+    width: 65.25vw;
+    height: 87vw;
+    top: 18vw;
+    left: 6.2vw;
 }
 .img-s {
     position: absolute;
     left: 50%;
     top: 45%;
     transform: translate(-50%,-50%);
-    width: 75vw;
+    width: 70.5vw;
     height: 100vw;
        
 }
 .pic-s {
     position: absolute;
-    width: 58.5vw;
-    height: 78vw;
-    top: 7vw;
-    left: 8vw;
+    width: 57.75vw;
+    height: 77vw;
+    top: 16.3vw;
+    left: 5.8vw;
 }
 .mask {
     position: absolute;
@@ -181,7 +181,7 @@ html ,body{
     height: 100vh;
 }
 .ione {
-    background-image: url(../images/frame.png);
+    background-image: url(../images/frame1.png);
     background-size:contain;
     left: 47%;
     top: 45%;
@@ -195,7 +195,7 @@ html ,body{
     left: 75vw;
 }
 .itwo {
-    background-image: url(../images/frame.png);
+    background-image: url(../images/frame2.png);
     background-size:contain;
     left: 50%;
     top: 35%
@@ -216,7 +216,7 @@ html ,body{
     height: 100vh;
 }
 .ithree {
-    background-image: url(../images/frame.png);
+    background-image: url(../images/frame3.png);
     background-size:contain;
     left: 46.5%;
     top: 42%;
@@ -229,7 +229,7 @@ html ,body{
     left: 310vw;
 }
 .ifour {
-    background-image: url(../images/frame.png);
+    background-image: url(../images/frame4.png);
     background-size:contain;
     left: 48%;
     top: 30%;
@@ -244,7 +244,7 @@ html ,body{
     left: 510vw;
 }
 .ifive {
-    background-image: url(../images/frame.png);
+    background-image: url(../images/frame5.png);
     background-size:contain;
     left: 50.5%;
     top: 45%;
@@ -264,9 +264,9 @@ html ,body{
     left: 530vw;
 }
 .isix {
-    background-image: url(../images/frame.png);
+    background-image: url(../images/frame6.png);
     background-size:contain;
-    left: 55%;
+    left: 60%;
     top: 40%;
 }
 .seven {
@@ -297,27 +297,28 @@ html ,body{
 }
 .pthree {
     z-index: 999;
-    bottom: 2vh;
-    left: 35vw;
+    bottom: 0vh;
+    left: 30vw;
     width: 108vw;
 }
 .pfour {
     z-index: 999;
-    bottom: 23vh;
-    left: 40vw;
-    width: 60vw;
+    bottom: 20vh;
+    left: 50vw;
+    width: 50vw;
 }
 .pfive {
     z-index: 999;
-    bottom: -3vh;
+    bottom: -1vh;
     right: 10vw;
-    width: 30vw;
+    /* width: 40vw; */
+    height: 25vh;
 }
 .psix {
     z-index: 996;
-    bottom: 3vh;
-    right: -35vw;
-    width: 70vw;
+    bottom: 6vh;
+    left: 100vw;
+    width: 25vw;
 }
 .light {
     position: absolute;
