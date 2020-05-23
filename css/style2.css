@@ -45,42 +45,24 @@ svg {
 g image {
     display: inline-block;
     transition: width 0.3s, height 0.3s;
-    transform-origin: 100% 0%;
+    transform-origin:100px 150px;
 }
-/* 
-#piece1 {
-    width: 67px;
-    height: 81.5px;
-    transition: width 1s, height 1s;
-    transform-origin: center center;
+
+/* #piece1 {
+    transform-origin: 30% 50%;
 }
 #piece2 {
-    width: 96px;
-    height: 67px;
-    transition: width 1s, height 1s;
     transform-origin: center center;
 }
 #piece3 {
-    width: 67px;
-    height: 81.5px;
-    transition: width 1s, height 1s;
-    transform-origin: center center;
+    transform-origin: 50px 50px;
 }
 #piece4 {
-    width: 81.5px;
-    height: 67px;
-    transition: width 1s, height 1s;
     transform-origin: center center;
 }
 #piece5 {
-    width: 67px;
-    height: 96px;
-    transition: width 1s, height 1s;
     transform-origin: center center;
 }
 #piece6 {
-    width: 67px;
-    height: 81.5px;
-    transition: width 1s,height 1s;
     transform-origin: center center;
 } */
