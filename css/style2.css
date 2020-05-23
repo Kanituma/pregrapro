@@ -10,6 +10,7 @@ html, body {
     height: 100%;
     background-image: url(../img/puzzle_bg.png);
     background-size: 100% 100%;
+    z-index: -2;
 }
 .scrollEle {
     position: fixed;
@@ -18,19 +19,68 @@ html, body {
     
 }
 .pframe{
-    width: 75.27vw;
-    height: 100vw;
+    width: 82.78vw;
+    height: 110vw;
     background-image: url(../img/puzzle_frame.png);
     background-size: cover;
     position: fixed;
+    z-index: -1;
     left: 50%;
-    top:45%;
+    top:47%;
     transform: translate(-50%,-50%);
+    /* pointer-events: none; */
     
 }
 svg {
-    display: inline-block;
-    /* left: 50%; */
-    top: 50%;
+    /* width: 110vw;
+    height: 220vw; */
+    width: 400px;
+    height: 800px;
+    position: absolute;
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%,-50%);
     
 }
+g image {
+    display: inline-block;
+    transition: width 0.3s, height 0.3s;
+    transform-origin: 100% 0%;
+}
+/* 
+#piece1 {
+    width: 67px;
+    height: 81.5px;
+    transition: width 1s, height 1s;
+    transform-origin: center center;
+}
+#piece2 {
+    width: 96px;
+    height: 67px;
+    transition: width 1s, height 1s;
+    transform-origin: center center;
+}
+#piece3 {
+    width: 67px;
+    height: 81.5px;
+    transition: width 1s, height 1s;
+    transform-origin: center center;
+}
+#piece4 {
+    width: 81.5px;
+    height: 67px;
+    transition: width 1s, height 1s;
+    transform-origin: center center;
+}
+#piece5 {
+    width: 67px;
+    height: 96px;
+    transition: width 1s, height 1s;
+    transform-origin: center center;
+}
+#piece6 {
+    width: 67px;
+    height: 81.5px;
+    transition: width 1s,height 1s;
+    transform-origin: center center;
+} */
