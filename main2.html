@@ -20,15 +20,20 @@
 				<g class="piece" id="5"><image xlink:href="img/p6_6.png" class="move" id="piece6"></g>
 			</svg>
 		</div>
-		
-	
-</div>
+	</div>
+	<audio src="audio/right.mp3" id="right"></audio>
 </body>
 </html>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
 <script src="js/puzzle.js"></script>
 <script>
 var startX = 0, startY = 0;
- 
+// window.addEventListener('touchstart', func, { passive: false })
+document.ontouchstart = function(e) {
+
+e.preventDefault();
+
+}
  function touchStart(e) {
    try {
 	 var touch = e.touches[0],

@@ -53,7 +53,7 @@ function moveElement(evt){
 }
 
 function deselectElement(evt){
-	console.log("sd")
+	// console.log("sd")
 	testing();
 	
 	if(elementSelect != 0){			
@@ -76,6 +76,7 @@ function reorg(evt){
 
 var origX = [65.65,200.26,65.65,158,64.65,200.2];   
 var origY = [169.5,169.5,250.55,250.55,370.55,370.55];
+var norigX,norigY
 function magnet(){
 	var i= elementSelect.id.slice(5) -1;
 	norigX = origX[i]-transX[i];
@@ -85,31 +86,41 @@ function magnet(){
 	if (Math.abs(currentPosx-norigX)<15 && Math.abs(currentPosy-norigY)<15) {
 		elementSelect.setAttribute("x",norigX);
 		elementSelect.setAttribute("y",norigY);
+		// console.log("sdf")
+		// moves[i].removeAttribute("ontouchstart")
+		// moves[i].removeAttribute("ontouchmove")
+		// moves[i].removeAttribute("ontouchend")
 	}
 	// if (Math.abs(currentPosx-origX[i])<15 && Math.abs(currentPosy-origY[i])<15) {
 	// 	elementSelect.setAttribute("x",origX[i]);
 	// 	elementSelect.setAttribute("y",origY[i]);
 	// }
 }
-			
-
+var num = 0;
+var right = document.getElementById("right")
 function testing() {
-	var bien_ubicada = 0;
+	// console.log("sdf")
+	console.log(elementSelect)
+	
 	var pieces = document.getElementsByClassName('piece');
 	for(var i=0;i<pieces.length;i++){
 		var posx = parseFloat(pieces[i].firstChild.getAttribute("x"));    
 		var posy = parseFloat(pieces[i].firstChild.getAttribute("y"));
-		ide = pieces[i].getAttribute("id");
-		if(origX[ide] == posx && origY[ide] == posy){
-			bien_ubicada = bien_ubicada + 1;
-			alert("win!")
+		ids = pieces[i].getAttribute("id");
+		console.log("sdf")
+		console.log(i)
+		if(norigX == posx && norigY == posy){
+			num = num + 1;
+			// alert("win!")
+			right.play();
 			moves[i].removeAttribute("ontouchstart")
 			moves[i].removeAttribute("ontouchmove")
 			moves[i].removeAttribute("ontouchend")
 		}
 	}
-	if(bien_ubicada == 6){
-		// win.play();
+	console.log(num)
+	if(num == 6){
+		
 		console.log("win!")
 		for(var i=0;i<pieces.length;i++){
 			console.log(moves[i])

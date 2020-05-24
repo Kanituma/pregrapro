@@ -3,6 +3,7 @@
     padding:0;
     scrollbar-width:none;
     -ms-overflow-style: none;
+    
 }
 html, body {
     position: absolute;
@@ -32,6 +33,7 @@ html, body {
     
 }
 #puzzle {
+    touch-action: none;
     /* width: 110vw;
     height: 220vw; */
     width: 400px;
