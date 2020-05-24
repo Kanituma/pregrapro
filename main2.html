@@ -29,11 +29,14 @@
 <script>
 var startX = 0, startY = 0;
 // window.addEventListener('touchstart', func, { passive: false })
-document.ontouchstart = function(e) {
+// document.ontouchstart = function(e) {
 
-e.preventDefault();
+// e.preventDefault();
 
-}
+// }
+// $(document).on('touchmove',function(e){
+//     e.preventDefault();
+// });
  function touchStart(e) {
    try {
 	 var touch = e.touches[0],
