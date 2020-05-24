@@ -31,7 +31,7 @@ html, body {
     /* pointer-events: none; */
     
 }
-svg {
+#puzzle {
     /* width: 110vw;
     height: 220vw; */
     width: 400px;
@@ -40,14 +40,21 @@ svg {
     left: 50%;
     top: 62%;
     transform: translate(-50%,-50%);
-    
-}
-g image {
-    display: inline-block;
-    transition: width 0.3s, height 0.3s;
-    transform-origin:100px 150px;
+    /* transform-box:fill-box; */
+    /* transform-origin:bottom right; */
 }
 
+g {
+    /* display: inline-block; */
+    /* transition: width 0.3s, height 0.3s; */
+    transform-origin:bottom right;
+}
+.move {
+    transition: width 0.3s, height 0.3s,transform 0.3s;
+}
+/* .scaleDown {
+    transform: scale(0.5)
+} */
 /* #piece1 {
     transform-origin: 30% 50%;
 }
