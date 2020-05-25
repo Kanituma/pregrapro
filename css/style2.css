@@ -37,6 +37,7 @@ html, body {
     /* touch-action: none; */
     /* width: 110vw;
     height: 220vw; */
+    display: block;
     width: 400px;
     height: 800px;
     position: absolute;
@@ -45,6 +46,7 @@ html, body {
     transform: translate(-50%,-50%);
     /* transform-box:fill-box; */
     /* transform-origin:bottom right; */
+    z-index: 1000;
 }
 
 g {
@@ -54,25 +56,21 @@ g {
 }
 .move {
     transition: width 0.3s, height 0.3s,transform 0.3s;
+    background-size:cover ;
 }
 /* .scaleDown {
     transform: scale(0.5)
 } */
-/* #piece1 {
-    transform-origin: 30% 50%;
+#piece1 {
+    background-image: url(../img/p6_1.png);
 }
 #piece2 {
-    transform-origin: center center;
 }
 #piece3 {
-    transform-origin: 50px 50px;
 }
 #piece4 {
-    transform-origin: center center;
 }
 #piece5 {
-    transform-origin: center center;
 }
 #piece6 {
-    transform-origin: center center;
-} */
+}
