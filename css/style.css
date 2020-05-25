@@ -382,3 +382,117 @@ html ,body{
     line-height: 1.7em;
 
 }
+
+.page3 {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/puzzle_bg.png);
+    background-size: 100% 100%;
+    z-index: 2000;
+    transform-origin: center;
+    /* overflow: hidden; */
+}
+#p_title {
+    position: absolute;
+    left: 50%;
+    top: 11vh;
+    transform: translate(-50%,-50%);
+    width: 62vw;
+    
+
+}
+.pframe{
+    width: 79.02vw;
+    height: 105vw;
+    background-image: url(../img/puzzle_frame.png);
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top:47%;
+    transform: translate(-50%,-50%);
+}
+#puzzle {
+    width: 105vw;
+    height: 210vw;
+    position: absolute;
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+}
+
+g {
+    transform-origin:bottom right;
+}
+.move {
+    transition: width 0.3s, height 0.3s,transform 0.3s;
+    background-size:cover ;
+}
+#back {
+    /* visibility: visible; */
+    /* opacity: 0; */
+    transition: all 1s;
+}
+#p_back {
+    width: 22vw;
+    height: 10.375vw;
+    background-image: url(../img/puzzle_back.png);
+    background-size: cover;
+    position: absolute;
+    left: 18vw;
+    bottom: 8vh;
+}
+
+#p_tip {
+    width: 22vw;
+    height: 10.375vw;
+    background-image: url(../img/puzzle_tip.png);
+    background-size: cover;
+    position: absolute;
+    right: 18vw;
+    bottom: 8vh;
+
+}
+#gif_content {
+    position: absolute;
+    width: 70vw;
+    height: 94vw;
+    top:47%;
+    left: 50%;
+    transform:translate(-50%,-50.4%);
+    pointer-events: none;
+    
+}
+#gif_content #p_gif {
+
+    opacity: 0;
+    position: absolute;
+    /* height: 100%; */
+    left: 50%;
+    top: 50%;
+    height: 538px;
+    width:399px;
+    background-image: url("../img/p5_sprit.jpg"); 
+    background-size: cover;
+    /* animation: puzzleani 3s 2s steps(30) both; */
+    z-index: 2000;
+    overflow: hidden;   
+    transform: translate(-50%,-50%);
+    transition: opacity 2s 1s;
+
+}
+
+@keyframes puzzleani {
+    from{
+        /* background-position: 0px */
+        background-position: 0px;
+    }
+    to { 
+        /* background-position: -30400px;  */
+        background-position: -12000px
+    }
+}

@@ -21,8 +21,8 @@ html, body {
     
 }
 .pframe{
-    width: 82.78vw;
-    height: 110vw;
+    width: 79.02vw;
+    height: 105vw;
     background-image: url(../img/puzzle_frame.png);
     background-size: cover;
     position: fixed;
@@ -30,47 +30,41 @@ html, body {
     left: 50%;
     top:47%;
     transform: translate(-50%,-50%);
-    /* pointer-events: none; */
-    
 }
 #puzzle {
-    /* touch-action: none; */
-    /* width: 110vw;
-    height: 220vw; */
-    display: block;
-    width: 400px;
-    height: 800px;
+    width: 105vw;
+    height: 210vw;
     position: absolute;
     left: 50%;
     top: 62%;
     transform: translate(-50%,-50%);
-    /* transform-box:fill-box; */
-    /* transform-origin:bottom right; */
     z-index: 1000;
 }
 
 g {
-    /* display: inline-block; */
-    /* transition: width 0.3s, height 0.3s; */
     transform-origin:bottom right;
 }
 .move {
     transition: width 0.3s, height 0.3s,transform 0.3s;
     background-size:cover ;
 }
-/* .scaleDown {
-    transform: scale(0.5)
-} */
-#piece1 {
-    background-image: url(../img/p6_1.png);
+#p_back {
+    width: 22vw;
+    height: 10.375vw;
+    background-image: url(../img/puzzle_back.png);
+    background-size: cover;
+    position: absolute;
+    left: 18vw;
+    bottom: 8vh;
 }
-#piece2 {
-}
-#piece3 {
-}
-#piece4 {
-}
-#piece5 {
-}
-#piece6 {
+
+#p_tip {
+    width: 22vw;
+    height: 10.375vw;
+    background-image: url(../img/puzzle_tip.png);
+    background-size: cover;
+    position: absolute;
+    right: 18vw;
+    bottom: 8vh;
+
 }

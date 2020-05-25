@@ -8,69 +8,22 @@
 </head>
 
 <body>
-	<div>
-		<div class="pframe">
-			<svg id="puzzle" viewBox="0,0,400,800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-				<g id="back"><image xlink:href="img/p6.png" width="268.7" height="361" x="65.65" y="169.5"></g>
-				<g class="piece" id="0"><image href="img/p6_1.png" xlink:href="img/p6_1.png" class="move" id="piece1"></image></g>
-				<g class="piece" id="1"><image href="img/p6_2.png" xlink:href="img/p6_2.png" class="move" id="piece2"></image></g>
-				<g class="piece" id="2"><image href="img/p6_3.png" xlink:href="img/p6_3.png" class="move" id="piece3"></image></g>
-				<g class="piece" id="3"><image href="img/p6_4.png" xlink:href="img/p6_4.png" class="move" id="piece4"></image></g>
-				<g class="piece" id="4"><image href="img/p6_5.png" xlink:href="img/p6_5.png" class="move" id="piece5"></image></g>
-				<g class="piece" id="5"><image href="img/p6_6.png" xlink:href="img/p6_6.png" class="move" id="piece6"></image></g>
-			</svg>
-		</div>
+	<div class="pframe">
+		<svg id="puzzle" viewBox="0,0,400,800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<g id="back"><image xlink:href="img/p6.png" width="268.7" height="361" x="65.65" y="169.5" opacity="0"></g>
+			<g class="piece" id="0"><image href="img/p6_1.png" xlink:href="img/p6_1.png" class="move" id="piece1"></image></g>
+			<g class="piece" id="1"><image href="img/p6_2.png" xlink:href="img/p6_2.png" class="move" id="piece2"></image></g>
+			<g class="piece" id="2"><image href="img/p6_3.png" xlink:href="img/p6_3.png" class="move" id="piece3"></image></g>
+			<g class="piece" id="3"><image href="img/p6_4.png" xlink:href="img/p6_4.png" class="move" id="piece4"></image></g>
+			<g class="piece" id="4"><image href="img/p6_5.png" xlink:href="img/p6_5.png" class="move" id="piece5"></image></g>
+			<g class="piece" id="5"><image href="img/p6_6.png" xlink:href="img/p6_6.png" class="move" id="piece6"></image></g>
+		</svg>
 	</div>
+	<div id="p_back"></div>
+	<div id="p_tip"></div>
+
 	<audio src="audio/right.mp3" id="right"></audio>
 </body>
 </html>
 <script src="js/jquery.js"></script>
 <script src="js/puzzle.js"></script>
-<script src="js/svginnerhtml.js"></script>
-<script>
-var puzzle = document.getElementById("puzzle");
-// puzzle.innerHTML = "<g id=\"back\"><image xlink:href=\"img/p6.png\" width=\"268.7\" height=\"361\" x=\"65.65\" y=\"169.5\"></g><g class=\"piece\" id=\"0\"><image href=\"img/p6_1.png\" xlink:href=\"img/p6_1.png\" class=\"move\" id=\"piece1\"></image></g><g class=\"piece\" id=\"1\"><image href=\"img/p6_2.png\" xlink:href=\"img/p6_2.png\" class=\"move\" id=\"piece2\"></image></g><g class=\"piece\" id=\"2\"><image href=\"img/p6_3.png\" xlink:href=\"img/p6_3.png\" class=\"move\" id=\"piece3\"></image></g><g class=\"piece\" id=\"3\"><image href=\"img/p6_4.png\" xlink:href=\"img/p6_4.png\" class=\"move\" id=\"piece4\"></image></g><g class=\"piece\" id=\"4\"><image href=\"img/p6_5.png\" xlink:href=\"img/p6_5.png\" class=\"move\" id=\"piece5\"></image></g><g class=\"piece\" id=\"5\"><image href=\"img/p6_6.png\" xlink:href=\"img/p6_6.png\" class=\"move\" id=\"piece6\"></image></g>"
-// svg4everybody();	
-var startX = 0, startY = 0;
-// window.addEventListener('touchstart', func, { passive: false })
-// document.ontouchstart = function(e) {
-
-// e.preventDefault();
-
-// }
-// $(document).on('touchmove',function(e){
-//     e.preventDefault();
-// });
- function touchStart(e) {
-   try {
-	 var touch = e.touches[0],
-	   x = Number(touch.pageX),
-	   y = Number(touch.pageY);
-	 startX = x;
-	 startY = y;
-   } catch (e) {
-	 alert(e);
-   }
- }
-
-//  document.addEventListener('touchstart', touchStart);
-//  var ele = document.querySelector('.scrollEle');
-//  ele.ontouchmove = function (e) {
-//    var point = e.touches[0],
-// 	 eleTop = ele.scrollTop,
-// 	 eleScrollHeight = ele.scrollHeight,
-// 	 eleOffsetHeight = ele.offsetHeight,
-// 	 eleTouchBottom = eleScrollHeight - eleOffsetHeight;
-//    if (eleTop === 0) {
-// 	 if (point.clientY > startY) {
-// 	   e.preventDefault();
-// 	 }
-//    }
-//    else if (eleTop === eleTouchBottom) {
-// 	 if (point.clientY < startY) {
-// 	   e.preventDefault()
-// 	 }
-//    }
-
-//  }
-</script>

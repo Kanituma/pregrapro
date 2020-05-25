@@ -105,11 +105,37 @@
                 <div id="floor"></div>
             </div>
     </div>   
+
+<!-- puzzle -->
+    <div class="page3">
+        <div class="pframe">
+            <svg id="puzzle" viewBox="0,0,400,800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="back" opacity="0"><image xlink:href="img/p6.png" width="268.7" height="361" x="65.65" y="169.5"></g>
+                <g id="backframe"><image xlink:href="img/puzzle_lines.png" width="268.7" height="361" x="65.65" y="169.5"></g>
+                <g class="piece" id="0"><image xlink:href="img/p6_1.png" class="move" id="piece1"></image></g>
+                <g class="piece" id="1"><image xlink:href="img/p6_2.png" class="move" id="piece2"></image></g>
+                <g class="piece" id="2"><image xlink:href="img/p6_3.png" class="move" id="piece3"></image></g>
+                <g class="piece" id="3"><image xlink:href="img/p6_4.png" class="move" id="piece4"></image></g>
+                <g class="piece" id="4"><image xlink:href="img/p6_5.png" class="move" id="piece5"></image></g>
+                <g class="piece" id="5"><image xlink:href="img/p6_6.png" class="move" id="piece6"></image></g>
+            </svg>
+        </div>
+        <d id="gif_content">
+            <div id="p_gif"></div>
+        </d>
+        <img src="img/p1_title.png" alt="" id="p_title"> 
+        <div id="p_back"></div>
+        <div id="p_tip"></div>
+        
+        <audio src="audio/right.mp3" id="right"></audio>
+    </div>
 </body>
 <script src="js/rellax.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="js/puzzle.js"></script>
 <script>
+    $(".page3").hide()
 var queue = new createjs.LoadQueue(false);
 queue.on("progress",event =>{
     $("#loading").css("transition","1.7s")
@@ -125,15 +151,23 @@ queue.loadFile("images/wall4.png")
 queue.loadFile("images/wall2.png")
 queue.loadFile("images/wall6.png")
 queue.loadFile("images/wall5.png")
+
+
+
+
+
+
+
 function MuApp(){
     $(".loader").css("opacity","0");
     setTimeout(function(){$("#loading").css("opacity","0");},100)
     var h = $(window).height();
-    var times = h / 640;
-    
-    $("#open").css("transform","translate(-50%,-50%) scale("+times+")")
+    var w = $(window).width();
+    var timesop = h / 640;
+    var timespgif = 0.94*w/538 ;
+    $("#open").css("transform","translate(-50%,-50%) scale("+timesop+")")
     $("#openani").css("animation","anim1 4s 1s steps(76) both")
-    
+    $("#p_gif").css("transform","translate(-50%,-50%) scale("+timespgif+")")
     console.log("sdfsdf")
     
     
@@ -180,12 +214,26 @@ function MuApp(){
     //     $(".comment").addClass("open")
         
     // })
-    var i;
+    var pici;
     $(".img").bind("click",function(){
-        i = $(".img").index($(this))
-        console.log("这是第"+i+"张画")
-        self.location='main2.html';
+        pici = $(".img").index($(this))+1
+        changeImage()
+        // console.log("这是第"+(pici+1)+"张画")
+        $(".page3").fadeIn("slow");
+        // $("#back").hide()
+        
     })
+
+    function changeImage() {
+        $("#piece1").attr("xlink:href","img/p"+pici+"_1.png")
+        $("#piece2").attr("xlink:href","img/p"+pici+"_2.png")
+        $("#piece3").attr("xlink:href","img/p"+pici+"_3.png")
+        $("#piece4").attr("xlink:href","img/p"+pici+"_4.png")
+        $("#piece5").attr("xlink:href","img/p"+pici+"_5.png")
+        $("#piece6").attr("xlink:href","img/p"+pici+"_6.png")
+        $("#back image").attr("xlink:href","img/p"+pici+".png")
+        // console.log($("#p_gif").attr("background-image"))
+    }
 }
 
 </script>
