@@ -231,7 +231,7 @@ function reloadPuzzle(id)
     scriptObj.type = "text/javascript"; 
     scriptObj.id = id; 
 	document.getElementsByTagName("head")[0].appendChild(scriptObj);
-	
+	letterOff()
 	
 
 }
