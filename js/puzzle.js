@@ -139,8 +139,8 @@ var num = 0;
 var right = document.getElementById("right")
 var delaytime =[8000,8000,4200,8000,5000,8000]
 function testing(){
-	var index = piece1.getAttribute("xlink:href").slice(5,6) -1
-	// console.log(isRight)
+	var index = piece1.getAttribute("xlink:href").slice(10,11) -1
+	console.log(index)
 	if(!isRight.includes(false)){
 		isLetter = true;
 		$("#p_gif").css("opacity","1")

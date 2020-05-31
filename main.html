@@ -111,20 +111,20 @@
     <div class="page3">
         <div class="pframe">
             <svg id="puzzle" viewBox="0,0,400,800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="back" opacity="0"><image xlink:href="images/_p6.png" width="268.7" height="361" x="65.65" y="169.5"></g>
-                <g id="backframe"><image xlink:href="images/uzzle_lines.png" width="268.7" height="361" x="65.65" y="169.5"></g>
-                <g class="piece" id="0"><image xlink:href="images/6_1.png" class="move" id="piece1"></image></g>
-                <g class="piece" id="1"><image xlink:href="images/6_2.png" class="move" id="piece2"></image></g>
-                <g class="piece" id="2"><image xlink:href="images/6_3.png" class="move" id="piece3"></image></g>
-                <g class="piece" id="3"><image xlink:href="images/6_4.png" class="move" id="piece4"></image></g>
-                <g class="piece" id="4"><image xlink:href="images/6_5.png" class="move" id="piece5"></image></g>
-                <g class="piece" id="5"><image xlink:href="images/6_6.png" class="move" id="piece6"></image></g>
+                <g id="back" opacity="0"><image xlink:href="images/p_p6.png" width="268.7" height="361" x="65.65" y="169.5"></g>
+                <g id="backframe"><image xlink:href="images/puzzle_lines.png" width="268.7" height="361" x="65.65" y="169.5"></g>
+                <g class="piece" id="0"><image xlink:href="images/p6_1.png" class="move" id="piece1"></image></g>
+                <g class="piece" id="1"><image xlink:href="images/p6_2.png" class="move" id="piece2"></image></g>
+                <g class="piece" id="2"><image xlink:href="images/p6_3.png" class="move" id="piece3"></image></g>
+                <g class="piece" id="3"><image xlink:href="images/p6_4.png" class="move" id="piece4"></image></g>
+                <g class="piece" id="4"><image xlink:href="images/p6_5.png" class="move" id="piece5"></image></g>
+                <g class="piece" id="5"><image xlink:href="images/p6_6.png" class="move" id="piece6"></image></g>
             </svg>
         </div>
         <d id="gif_content">
             <div id="p_gif"></div>
         </d>
-        <img src="images/1_title.png" alt="" id="p_title"> 
+        <img src="images/p1_title.png" alt="" id="p_title"> 
         <div id="p_back"></div>
         <div id="p_tip"></div>
         <div id="p_story">
@@ -161,12 +161,12 @@ queue.loadFile("images/wall4.png")
 queue.loadFile("images/wall2.png")
 queue.loadFile("images/wall6.png")
 queue.loadFile("images/wall5.png")
-// queue.loadFile("images/1_sprite.jpg")
-// queue.loadFile("images/2_sprite.jpg")
-// queue.loadFile("images/3_sprite.jpg")
-// queue.loadFile("images/4_sprite.jpg")
-// queue.loadFile("images/5_sprite.jpg")
-// queue.loadFile("images/6_sprite.jpg")
+// queue.loadFile("images/p1_sprite.jpg")
+// queue.loadFile("images/p2_sprite.jpg")
+// queue.loadFile("images/p3_sprite.jpg")
+// queue.loadFile("images/p4_sprite.jpg")
+// queue.loadFile("images/p5_sprite.jpg")
+// queue.loadFile("images/p6_sprite.jpg")
 
 var winh = Math.floor(innerHeight/100)
 console.log(winh)
@@ -252,22 +252,22 @@ function MuApp(){
     var gifDuration = ["5s","5s","2s","5s","3s","5s"];
 
     function changeImage() {
-        $("#piece1").attr("xlink:href","images/"+pici+"_1.png")
-        $("#piece2").attr("xlink:href","images/"+pici+"_2.png")
-        $("#piece3").attr("xlink:href","images/"+pici+"_3.png")
-        $("#piece4").attr("xlink:href","images/"+pici+"_4.png")
-        $("#piece5").attr("xlink:href","images/"+pici+"_5.png")
-        $("#piece6").attr("xlink:href","images/"+pici+"_6.png")
-        $("#back image").attr("xlink:href","images/_p"+pici+".png")
-        $("#p_title").attr("src","images/"+pici+"_title.png")
-        $("#p_tip").css("background-image","url('../images/uzzle_tip.png')")
+        $("#piece1").attr("xlink:href","images/p"+pici+"_1.png")
+        $("#piece2").attr("xlink:href","images/p"+pici+"_2.png")
+        $("#piece3").attr("xlink:href","images/p"+pici+"_3.png")
+        $("#piece4").attr("xlink:href","images/p"+pici+"_4.png")
+        $("#piece5").attr("xlink:href","images/p"+pici+"_5.png")
+        $("#piece6").attr("xlink:href","images/p"+pici+"_6.png")
+        $("#back image").attr("xlink:href","images/p_p"+pici+".png")
+        $("#p_title").attr("src","images/p"+pici+"_title.png")
+        $("#p_tip").css("background-image","url('../images/puzzle_tip.png')")
         changePani(pici,gifSteps[pici-1],gifWidth[pici-1],gifDuration[pici-1])
        
     }
     function changePani(index,steps,width,duration){
-        $("#p_gif").css("background-image","url('../images/"+index+"_sprite.jpg'")
-        $("#p_story").css("background-image","url('../img/story_bg_"+index+".png'")
-        $("#p_words").css("background-image","url('../img/story"+index+".png'")
+        $("#p_gif").css("background-image","url('../images/p"+index+"_sprite.jpg'")
+        $("#p_story").css("background-image","url('../images/story_bg_"+index+".png'")
+        $("#p_words").css("background-image","url('../images/story"+index+".png'")
         document.documentElement.style.setProperty("--steps", steps);
         document.documentElement.style.setProperty("--width", width);
         document.documentElement.style.setProperty("--duration", duration);
