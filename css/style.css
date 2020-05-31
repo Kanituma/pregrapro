@@ -422,7 +422,7 @@ html ,body{
     left: 50%;
     top:47%;
     transform: translate(-50%,-50%);
-    box-shadow: 1px 1px black ;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3)  ;
 }
 #puzzle {
     width: 105vw;
@@ -466,6 +466,7 @@ g {
     right: 18vw;
     bottom: 8vh;
     z-index: 0;
+    transition: background-image 1s
 
 }
 #gif_content {
@@ -536,7 +537,7 @@ g {
     left: 50%;
     bottom: 8%;
     transform:translateX(-50%);
-    pointer-events:all;
+    pointer-events:none;
 
 }
 #p_words{

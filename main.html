@@ -134,6 +134,11 @@
         <div id="blackbg"></div>
         <audio src="audio/right.mp3" id="right"></audio>
     </div>
+
+<!-- 海报生成 -->
+    <div class="page4">
+        
+    </div>
 </body>
 <script src="js/rellax.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
@@ -255,6 +260,7 @@ function MuApp(){
         $("#piece6").attr("xlink:href","img/p"+pici+"_6.png")
         $("#back image").attr("xlink:href","img/p"+pici+".png")
         $("#p_title").attr("src","img/p"+pici+"_title.png")
+        $("#p_tip").css("background-image","url('../img/puzzle_tip.png')")
         changePani(pici,gifSteps[pici-1],gifWidth[pici-1],gifDuration[pici-1])
        
     }
@@ -265,7 +271,7 @@ function MuApp(){
         document.documentElement.style.setProperty("--steps", steps);
         document.documentElement.style.setProperty("--width", width);
         document.documentElement.style.setProperty("--duration", duration);
-        console.log($("#p_gif").css("animation-timing-function"))
+        // console.log($("#p_gif").css("animation-timing-function"))
         
     }
 }

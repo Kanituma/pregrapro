@@ -136,7 +136,7 @@ function magnet(){
 var isTip = true;
 var num = 0;
 var right = document.getElementById("right")
-var delaytime =[9000,9000,6000,9000,6000,9000]
+var delaytime =[8000,8000,4200,8000,5000,8000]
 function testing(){
 	var index = piece1.getAttribute("xlink:href").slice(5,6) -1
 	// console.log(isRight)
@@ -154,26 +154,29 @@ function testing(){
 function letterOn(){
 	$("#p_story").css("opacity","1")
 	$("#blackbg").css("opacity","0.3")
-	$("#p_tip").css("background-image","url('../img/puzzle_share.png')")
+	$("#p_tip").css("background-image","url('../img/puzzle_story.png')")
 	// $("#blackbg").css("pointer-events","all")
 	$("#p_tip").css("z-index","-3")
 	isTip = false; 
 	$("#p_back").css("z-index","-3")
 	$("#p_story").css("pointer-events","all")
+	$("#p_share").css("pointer-events","all")
 	setTimeout(function(){
 		$("#p_gif").css("animation-name","none")
 	},1000)
 	console.log("letterOn!")
 }
 function letterOff(){
+	$("#p_gif").css("animation-name","puzzleani")
 	$("#p_story").css("opacity","0")
 	$("#blackbg").css("opacity","0")
 	$("#p_story").css("pointer-events","none")
+	$("#p_share").css("pointer-events","none")
 	setTimeout(function(){
 		$("#p_tip").css("z-index","0")
 		$("#p_back").css("z-index","0")
-	},1000)
-	$("#p_gif").css("animation-name","puzzleani")
+	},700)
+	
 	console.log("letterOff!")
 }
 
