@@ -397,7 +397,7 @@ html ,body{
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-image: url(../img/puzzle_bg.png);
+    background-image: url(../images/puzzle_bg.png);
     background-size: 100% 100%;
     z-index: 2000;
     transform-origin: center;
@@ -416,7 +416,7 @@ html ,body{
 .pframe{
     width: 79.02vw;
     height: 105vw;
-    background-image: url(../img/puzzle_frame.png);
+    background-image: url(../images/puzzle_frame.png);
     background-size: cover;
     position: absolute;
     z-index: -1;
@@ -450,7 +450,7 @@ g {
 #p_back {
     width: 22vw;
     height: 10.375vw;
-    background-image: url(../img/puzzle_back.png);
+    background-image: url(../images/puzzle_back.png);
     background-size: cover;
     position: absolute;
     left: 18vw;
@@ -461,7 +461,7 @@ g {
 #p_tip {
     width: 22vw;
     height: 10.375vw;
-    background-image: url(../img/puzzle_tip.png);
+    background-image: url(../images/puzzle_tip.png);
     background-size: cover;
     position: absolute;
     right: 18vw;
@@ -488,7 +488,7 @@ g {
     top: 50%;
     height: 538px;
     width:399px;
-    background-image: url("../img/p5_sprite.jpg"); 
+    background-image: url("../images/p5_sprite.jpg"); 
     background-size: cover;
     z-index: 2000;
     overflow: hidden;   
@@ -526,13 +526,13 @@ g {
     pointer-events: none;
     /* visibility: hidden; */
     transition: 1s;
-    background-image: url("../img/story_bg_1.png");
+    background-image: url("../images/story_bg_1.png");
     background-size: cover;
 }
 #p_share {
     width: 33vw;
     height: 11vw;
-    background-image: url("../img/puzzle_share.png");
+    background-image: url("../images/puzzle_share.png");
     background-size: cover;
     position: absolute;
     left: 50%;
@@ -542,7 +542,7 @@ g {
 
 }
 #p_words{
-    background-image:url(../img/story1.png);
+    background-image:url(../images/story1.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 85%;

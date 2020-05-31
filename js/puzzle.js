@@ -157,7 +157,7 @@ function letterOn(){
 	if(isLetter){
 		$("#p_story").css("opacity","1")
 		$("#blackbg").css("opacity","0.3")
-		$("#p_tip").css("background-image","url('../img/puzzle_story.png')")
+		$("#p_tip").css("background-image","url('../images/puzzle_story.png')")
 		// $("#blackbg").css("pointer-events","all")
 		$("#p_tip").css("z-index","-3")
 		isTip = false; 
@@ -197,7 +197,7 @@ p_back.onclick = function(){
 	setTimeout(function(){
 		reloadPuzzle("reloadpuzzle")
 		$("#p_gif").css("animation-name","none")
-		puzzle.innerHTML = "<g id=\"back\" opacity=\"0\"><image xlink:href=\"img/p6.png\" width=\"268.7\" height=\"361\" x=\"65.65\" y=\"169.5\"></g><g id=\"backframe\"><image xlink:href=\"img/puzzle_lines.png\" width=\"268.7\" height=\"361\" x=\"65.65\" y=\"169.5\"></g><g class=\"piece\" id=\"0\"><image xlink:href=\"img/p6_1.png\" class=\"move\" id=\"piece1\"></image></g><g class=\"piece\" id=\"1\"><image xlink:href=\"img/p6_2.png\" class=\"move\" id=\"piece2\"></image></g><g class=\"piece\" id=\"2\"><image xlink:href=\"img/p6_3.png\" class=\"move\" id=\"piece3\"></image></g><g class=\"piece\" id=\"3\"><image xlink:href=\"img/p6_4.png\" class=\"move\" id=\"piece4\"></image></g><g class=\"piece\" id=\"4\"><image xlink:href=\"img/p6_5.png\" class=\"move\" id=\"piece5\"></image></g><g class=\"piece\" id=\"5\"><image xlink:href=\"img/p6_6.png\" class=\"move\" id=\"piece6\"></image></g>"
+		puzzle.innerHTML = "<g id=\"back\" opacity=\"0\"><image xlink:href=\"images/p_p6.png\" width=\"268.7\" height=\"361\" x=\"65.65\" y=\"169.5\"></g><g id=\"backframe\"><image xlink:href=\"images/puzzle_lines.png\" width=\"268.7\" height=\"361\" x=\"65.65\" y=\"169.5\"></g><g class=\"piece\" id=\"0\"><image xlink:href=\"images/p6_1.png\" class=\"move\" id=\"piece1\"></image></g><g class=\"piece\" id=\"1\"><image xlink:href=\"images/p6_2.png\" class=\"move\" id=\"piece2\"></image></g><g class=\"piece\" id=\"2\"><image xlink:href=\"images/p6_3.png\" class=\"move\" id=\"piece3\"></image></g><g class=\"piece\" id=\"3\"><image xlink:href=\"images/p6_4.png\" class=\"move\" id=\"piece4\"></image></g><g class=\"piece\" id=\"4\"><image xlink:href=\"images/p6_5.png\" class=\"move\" id=\"piece5\"></image></g><g class=\"piece\" id=\"5\"><image xlink:href=\"images/p6_6.png\" class=\"move\" id=\"piece6\"></image></g>"
 	},1000)
 	
 	
