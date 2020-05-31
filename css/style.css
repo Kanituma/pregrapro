@@ -1,3 +1,10 @@
+:root {
+    --width:-11600px;
+    --steps:steps(29);
+    --duration:3s;
+    --delay:1s;
+   
+}
 * {
     margin: 0;
     padding:0;
@@ -401,6 +408,7 @@ html ,body{
     top: 11vh;
     transform: translate(-50%,-50%);
     width: 62vw;
+    pointer-events: none;
     
 
 }
@@ -414,6 +422,7 @@ html ,body{
     left: 50%;
     top:47%;
     transform: translate(-50%,-50%);
+    box-shadow: 1px 1px black ;
 }
 #puzzle {
     width: 105vw;
@@ -445,6 +454,7 @@ g {
     position: absolute;
     left: 18vw;
     bottom: 8vh;
+    z-index: 0;
 }
 
 #p_tip {
@@ -455,6 +465,7 @@ g {
     position: absolute;
     right: 18vw;
     bottom: 8vh;
+    z-index: 0;
 
 }
 #gif_content {
@@ -465,7 +476,6 @@ g {
     left: 50%;
     transform:translate(-50%,-50.4%);
     pointer-events: none;
-    
 }
 #gif_content #p_gif {
 
@@ -476,23 +486,76 @@ g {
     top: 50%;
     height: 538px;
     width:399px;
-    background-image: url("../img/p5_sprit.jpg"); 
+    background-image: url("../img/p5_sprite.jpg"); 
     background-size: cover;
-    /* animation: puzzleani 3s 2s steps(30) both; */
     z-index: 2000;
     overflow: hidden;   
     transform: translate(-50%,-50%);
-    transition: opacity 2s 1s;
+    transition: opacity 2s 1s,animation 1s;
+    animation-timing-function: var(--steps);
+    animation-delay: 2s;
+    animation-duration: var(--duration);
+    animation-fill-mode: both;
+    animation-name: none;
 
 }
 
 @keyframes puzzleani {
-    from{
+    0%{
         /* background-position: 0px */
         background-position: 0px;
     }
-    to { 
+    100% { 
         /* background-position: -30400px;  */
-        background-position: -12000px
+        background-position: var(--width)
     }
+}
+
+#p_story {
+    position: absolute;
+    width: 94vw;
+    height: 127vw;
+    top:51%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    /* visibility: hidden; */
+    transition: 1s;
+    background-image: url("../img/story_bg_1.png");
+    background-size: cover;
+}
+#p_share {
+    width: 33vw;
+    height: 11vw;
+    background-image: url("../img/puzzle_share.png");
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform:translateX(-50%);
+    pointer-events:all;
+
+}
+#p_words{
+    background-image:url(../img/story1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 85%;
+    height: 100%;
+    margin:17vw auto;
+    pointer-events: none;
+}
+#blackbg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index:-2;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+    transition: 1s;
 }
