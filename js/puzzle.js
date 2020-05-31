@@ -134,6 +134,7 @@ function magnet(){
 
 //信件
 var isTip = true;
+var isLetter = false;
 var num = 0;
 var right = document.getElementById("right")
 var delaytime =[8000,8000,4200,8000,5000,8000]
@@ -141,6 +142,7 @@ function testing(){
 	var index = piece1.getAttribute("xlink:href").slice(5,6) -1
 	// console.log(isRight)
 	if(!isRight.includes(false)){
+		isLetter = true;
 		$("#p_gif").css("opacity","1")
 		$("#puzzle").delay(1500).fadeOut("slow");
 		$("#p_gif").css("animation-name","puzzleani")
@@ -152,19 +154,22 @@ function testing(){
 	}
 }
 function letterOn(){
-	$("#p_story").css("opacity","1")
-	$("#blackbg").css("opacity","0.3")
-	$("#p_tip").css("background-image","url('../img/puzzle_story.png')")
-	// $("#blackbg").css("pointer-events","all")
-	$("#p_tip").css("z-index","-3")
-	isTip = false; 
-	$("#p_back").css("z-index","-3")
-	$("#p_story").css("pointer-events","all")
-	$("#p_share").css("pointer-events","all")
-	setTimeout(function(){
-		$("#p_gif").css("animation-name","none")
-	},1000)
-	console.log("letterOn!")
+	if(isLetter){
+		$("#p_story").css("opacity","1")
+		$("#blackbg").css("opacity","0.3")
+		$("#p_tip").css("background-image","url('../img/puzzle_story.png')")
+		// $("#blackbg").css("pointer-events","all")
+		$("#p_tip").css("z-index","-3")
+		isTip = false; 
+		$("#p_back").css("z-index","-3")
+		$("#p_story").css("pointer-events","all")
+		$("#p_share").css("pointer-events","all")
+		setTimeout(function(){
+			$("#p_gif").css("animation-name","none")
+		},1000)
+		console.log("letterOn!")
+	}
+	
 }
 function letterOff(){
 	$("#p_gif").css("animation-name","puzzleani")
@@ -221,6 +226,7 @@ p_tip.onclick = function(){
 function reloadPuzzle(id)
 {
 	isTip = true;
+	isLetter = false;
     var oldjs = null; 
     var t = null; 
 	var oldjs = document.getElementById(id);
